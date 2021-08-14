@@ -94,7 +94,7 @@ body {
         z-index: 1;
         text-decoration: none;
         color: white;
-        padding: 10px 5px ;
+        padding: 17px 12px;
         font-weight: 500;
         font-size: 2em;
 }
@@ -104,6 +104,8 @@ body {
         padding-bottom: 10px;
         font-family: eb_garamondregular;
         width: 100vw;
+        overflow: auto;
+        
 }
 
 .nav .menu {
