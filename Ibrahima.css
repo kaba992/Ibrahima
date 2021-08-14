@@ -114,9 +114,20 @@ body {
         align-items: center;
         flex-direction: row;
         justify-content: space-around;
-        animation: bounce-in-top 1s both;
+        
 }
-
+.item1{;
+        animation: bounce-in-top  0.6s both;
+}
+.item2{
+        animation: bounce-in-top  1s both;
+}       
+.item3{
+        animation: bounce-in-top  1.4s both;
+}
+.item4{
+        animation: bounce-in-top  1.8s both;
+}
 .nav a:hover {
         border-bottom: 1px thick double white;
 }
@@ -166,10 +177,12 @@ li:hover a::before{
 }
 
 .séparateur h1 {
-        color: white;
+        height: 100vh;
+        display: flex;
         text-align: center;
+        justify-content: center;
+        color: white;
         font-size: 4em;
-        
         animation: tracking-in-expand-fwd 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
         font-family: eb_garamondregular;
 }
