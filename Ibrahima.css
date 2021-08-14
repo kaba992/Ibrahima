@@ -1,0 +1,180 @@
+@keyframes bounce-in-top {
+        0% {
+                -webkit-transform: translateY(-500px);
+                transform: translateY(-500px);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+                opacity: 0;
+        }
+        38% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+                opacity: 1;
+        }
+        55% {
+                -webkit-transform: translateY(-65px);
+                transform: translateY(-65px);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+        }
+        72% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+        }
+        81% {
+                -webkit-transform: translateY(-28px);
+                transform: translateY(-28px);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+        }
+        90% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+        }
+        95% {
+                -webkit-transform: translateY(-8px);
+                transform: translateY(-8px);
+                -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+        }
+        100% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+        }
+}
+
+@keyframes tracking-in-expand-fwd {
+        0% {
+                letter-spacing: -0.5em;
+                -webkit-transform: translateZ(-700px);
+                transform: translateZ(-700px);
+                opacity: 0;
+        }
+        40% {
+                opacity: 0.6;
+        }
+        100% {
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+                opacity: 1;
+        }
+}
+
+@font-face {
+        font-family: 'eb_garamondregular';
+        src: url('ebgaramond-variablefont_wght-webfont.woff2') format('woff2'), url('ebgaramond-variablefont_wght-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+}
+
+* {
+        box-sizing: border-box;
+        list-style-type: none;
+}
+
+body {
+        background-color: black;
+}
+
+.nav ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+}
+
+.nav a {
+        z-index: 1;
+        text-decoration: none;
+        color: white;
+        padding: 10px 5px ;
+        font-weight: 500;
+        font-size: 2em;
+}
+
+.nav {
+        background: url("images/separateur.png") repeat-x bottom;
+        padding-bottom: 10px;
+        font-family: eb_garamondregular;
+        width: 100vw;
+}
+
+.nav .menu {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+        animation: bounce-in-top 1s both;
+}
+
+.nav a:hover {
+        border-bottom: 1px thick double white;
+}
+li {
+        z-index: 1;
+        position: relative;
+        padding: 0 20px;
+        height: 100%;
+        display: flex;
+     }
+     li::before {
+        content: "";
+        position: absolute;
+        height: 33.33%;
+        width: 0;
+        background-color: rgb(158, 104, 85);
+        right: 0;
+        z-index: 0;
+        top: 33.33%;
+        transition: all 0.5s;
+     }
+     li::after {
+        content: "";
+        position: absolute;
+        height: 33.33%;
+        width: 0;
+        background-color: rgb(158, 104, 85);
+        left: 0;
+        z-index: 0;
+        bottom: 0;
+        transition: all 0.5s;
+     }
+     a::before {
+        position: absolute;
+        content: "";
+        height: 33.33%;
+        width: 0;
+        background-color: rgb(158, 104, 85);
+        bottom: 66.66%;
+        left: 0;
+        transition: all 0.5s;
+     }
+     li:hover:before,
+li:hover::after,
+li:hover a::before{
+   width: 100%;
+}
+
+.séparateur h1 {
+        color: white;
+        text-align: center;
+        font-size: 4em;
+        margin-bottom: ;
+        animation: tracking-in-expand-fwd 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        font-family: eb_garamondregular;
+}
+
+.séparateur a {
+        text-decoration: none;
+        color: white;
+}
