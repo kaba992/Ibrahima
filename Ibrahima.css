@@ -169,7 +169,7 @@ li:hover a::before{
         color: white;
         text-align: center;
         font-size: 4em;
-        margin-bottom: ;
+        
         animation: tracking-in-expand-fwd 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
         font-family: eb_garamondregular;
 }
