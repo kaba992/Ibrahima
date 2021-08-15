@@ -183,31 +183,19 @@ li:hover:before, li:hover::after, li:hover a::before {
         width: 100%;
 }
 
-.séparateur h1 {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        color: white;
-        font-size: 4em;
-        animation: tracking-in-expand-fwd 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-        margin-top: 30px;
-}
-
-.séparateur a {
-        text-decoration: none;
-        color: white;
-}
-
 .carousel {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         flex-wrap: wrap;
-        margin-top: 150px;
+        width: 100%;
+        margin-top: 12.5%;
         transition: all 0.5s ease-in-out 0s;
 }
 .carousel img{
         border-radius: 10px;
+        width: 487px;
+        height:304;
         box-shadow: 1px 2px 5px rgba(205, 165, 165);
 }
 
