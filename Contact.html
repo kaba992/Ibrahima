@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Contact.css">
+    <title>Contact</title>
+</head>
+
+<body>
+    <div class=bloc_page>
+        <header class="header">
+			<div class="Titre"> 
+				<h1>KABA IBRAHIMA</h1>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="Ibrahima.html" title="Accuel">ACCUEIL</a></li>
+					<li><a href="blog.html" title="Voir mon blog">BLOG</a></li>
+					<li><a href="Mon_CV.html" title="Voir mon cv">CV</a></li>
+					<li><a href="Contact.html" title="Me contacter">CONTACT</a></li>
+				</ul>
+			</nav>
+		</header>
+        <section>
+            
+            <form method="POST" action="traitement.php">
+                <p>
+                <fieldset>
+                    <legend>Vos coordonées</legend>
+                    <label for="Nom">Nom: </label>
+                    <input type="text" name="Nom" id="Nom" size="15" maxlength="10" placeholder="Nom" autofocus
+                        required />
+                    <label for="Prénom">Prénom: </label>
+                    <input type="text" name="Prénom" id="Prénom" size="15" maxlength="10" placeholder="Prénom"
+                        required /><br>
+                </fieldset>
+                </p>
+                <p>
+                <fieldset>
+
+                    <legend>Concernant la peche</legend>
+                    <p>Votre record de pêche</p>
+                    <label for="nom du poisson">Nom du poisson: </label>
+                    <input type="text" name="nom du poisson" id="nom du poisson" placeholder="Nom du poisson"
+                        maxlength="15" required>
+                    <label for="Taille">Taille: </label>
+                    <input type="text" name="Taille" id="Taille" placeholder="Taille du poisson" required>
+                    <label for="poids du poisson">Poids: </label>
+                    <input type="text" name="Poids du poisson" id="Poids du poisson" placeholder="Poids du poisson"
+                        maxlength="15" required><br>
+                    <label for="Lieu">Où l'avez-vous pecher</label><br>
+                    <select name="Lieu" id="Lieu" required>
+                        <option value="Mer">Mer</option>
+                        <option value="Seine">Seine</option>
+                        <option value="Riviere">Rivière</option>
+                        <option value="Etang">Etang</option>
+                    </select>
+                </fieldset>
+                </p>
+                <p>
+                <fieldset>
+                    <legend>Votre retour!</legend>
+                    <p>Dans quelle tranche d'âge êtes vous?</p>
+                    <input type="radio" name="age" value="10-15ans" id="10-15ans"><label for="10-15ans">10 et
+                        15ans</label><br>
+                    <input type="radio" name="age" value="5-6ans" id="5-6ans"><label for="5-6ans">5 et 6 ans</label><br>
+                    <input type="radio" name="age" value="15-20ans" id="15-20ans"><label for="15-20ans">15 et
+                        20ans</label><br>
+                    <label for="idée"> Que pensez-vous de mon site?</label><br>
+                    <textarea name="idée" id="idée"></textarea><br>
+                </fieldset>
+                </p>
+                <p>
+                    <input type="submit" value="Envoyer">
+                </p>
+            </form>
+        </section>
+</body>
+
+</html>

@@ -222,7 +222,6 @@ li:hover:before, li:hover::after, li:hover a::before {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        position: absolute;
         bottom: 0;
         padding: 30px;
         width: 100%;
