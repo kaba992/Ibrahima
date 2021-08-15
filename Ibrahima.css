@@ -206,6 +206,10 @@ li:hover:before, li:hover::after, li:hover a::before {
         margin-top: 150px;
         transition: all 0.5s ease-in-out 0s;
 }
+.carousel img{
+        border-radius: 10px;
+        box-shadow: 1px 2px 5px rgba(205, 165, 165);
+}
 
 .carousel img:hover {
         cursor: pointer;
