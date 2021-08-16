@@ -52,35 +52,40 @@
                 animation-timing-function: ease-out;
         }
 }
-
-@keyframes tracking-in-expand-fwd {
-        0% {
-                letter-spacing: -0.5em;
-                -webkit-transform: translateZ(-700px);
-                transform: translateZ(-700px);
-                opacity: 0;
-        }
-        40% {
-                opacity: 0.6;
-        }
-        100% {
-                -webkit-transform: translateZ(0);
-                transform: translateZ(0);
-                opacity: 1;
-        }
+@keyframes scale-in-center {
+	0% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
 }
 
+@font-face {
+        font-family: 'eb_garamond_sc12_regular';
+        src: url('Fonts/ebgaramond/ebgaramondsc12-regular-webfont.woff2') format('woff2'),
+             url('Fonts/ebgaramond/ebgaramondsc12-regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    
+}
 
 * {
         box-sizing: border-box;
         color: white;
         margin: 0;
         padding: 0;
+        font-family: 'eb_garamond_sc12_regular';
        
 }
 
 body {
         background-color: black;
+       
         
 }
 
@@ -114,6 +119,7 @@ body {
         flex-direction: row;
         justify-content: space-around;
 }
+/*animation images accueil*/
 
 .item1 {
         animation: bounce-in-top 0.6s both;
@@ -128,8 +134,9 @@ body {
 }
 
 .item4 {
-        animation: bounce-in-top 1.8s both;
+        animation: bounce-in-top 1.8s both;animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+/*fin animation images accueil*/
 
 li {
         z-index: 1;
@@ -219,7 +226,7 @@ li:hover:before, li:hover::after, li:hover a::before {
         align-items: center;
         justify-content: space-between;
         bottom: 0;
-        margin-top: 210px;
+        margin-top: 14%;
         width: 100%;
         transition: transform .2s;
 }
@@ -229,7 +236,7 @@ li:hover:before, li:hover::after, li:hover a::before {
         transform: scale(1.5);
 }
 
-/* CSS Page Blog*/
+                                                                        /* CSS Page Blog*/
 
 .bloc_page{
         width: 950px;
@@ -243,8 +250,7 @@ li:hover:before, li:hover::after, li:hover a::before {
 	width: 100%;
 	height: 33px;
 	background-color: rgba(24, 24, 24, 0.8);
-	padding-top: 15px;
-	padding-left: 4px;
+	padding: 20px;
 	color: white;
 	font-size: 1em;
 }
@@ -258,8 +264,7 @@ li:hover:before, li:hover::after, li:hover a::before {
 	background: url('images/belle_ille.jpg') no-repeat;
 	position: relative;
 	margin-top: 20px;
-	-webkit-animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 
@@ -279,27 +284,41 @@ li:hover:before, li:hover::after, li:hover a::before {
 	margin-right: 20px;
 	flex: 3;
 }
-
+.ico_categorie{
+        vertical-align: middle;
+        margin-right: 5px;
+}
+/*animation bloc de la page Blog*/
+.passion_photo{
+        animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.passion_peche{
+        animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}       
+.passion_jeux{
+        animation: scale-in-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/*fin anim bloc de la page blog*/
 
 .aside {
 	flex: 1.2;
 	background-color: #706b64;
 	color: white;
-	box-shadow: 0px 2px 5px #1c1a19;
+	box-shadow: 0px 2px 5px rgba(205, 165, 165);
 	border-radius: 5px;
 	font-size: 0.9em;
 	padding: 10px;
 	margin-top: 85px;
 	position: relative;
 	height: 50%;
-	-webkit-animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: scale-in-center 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 .bulle {
 	position: absolute;
 	top: 150px;
-	left: -10px;
+	left: -12px;
 }
+
 .photo_ibra {
 	text-align: center;
 }
@@ -317,5 +336,9 @@ li:hover:before, li:hover::after, li:hover a::before {
 }
 .logos {
 	text-align: center;
+}
+.logos img:hover{
+        cursor: pointer;
+        transform: scale(1.5);
 }
 
