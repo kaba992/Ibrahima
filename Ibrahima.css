@@ -1,3 +1,5 @@
+/*CSS Accueil*/
+
 @keyframes bounce-in-top {
         0% {
                 -webkit-transform: translateY(-500px);
@@ -88,9 +90,7 @@ body {
 
 .page {
         width: 100%;
-        height: 100vh;
         font-family: eb_garamondregular;
-        position: relative;
 }
 
 .nav a {
@@ -107,7 +107,6 @@ body {
         padding-bottom: 10px;
         font-family: eb_garamondregular;
         width: 100vw;
-        overflow: auto;
 }
 
 .nav .menu {
@@ -192,10 +191,11 @@ li:hover:before, li:hover::after, li:hover a::before {
         margin-top: 12.5%;
         transition: all 0.5s ease-in-out 0s;
 }
-.carousel img{
+
+.carousel img {
         border-radius: 10px;
         width: 487px;
-        height:304;
+        height: 304;
         box-shadow: 1px 2px 5px rgba(205, 165, 165);
 }
 
@@ -222,7 +222,6 @@ li:hover:before, li:hover::after, li:hover a::before {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        position: absolute;
         bottom: 0;
         padding: 30px;
         width: 100%;
@@ -232,4 +231,40 @@ li:hover:before, li:hover::after, li:hover a::before {
 .reseaux img:hover {
         cursor: pointer;
         transform: scale(1.5);
+}
+
+/* CSS Page Blog*/
+
+.bloc_page {
+        display: flex;
+        width: 950px;
+        margin: auto;
+        background-color: rgba(205, 165, 165);
+}
+
+.baniere_description {
+        position: absolute;
+        bottom: 0;
+        border-radius: 0px 0px 5px 5px;
+        width: 950px;
+        height: 33px;
+        background-color: rgba(24, 24, 24, 0.8);
+        padding-top: 15px;
+        padding-left: 4px;
+        color: white;
+        font-size: 1em;
+}
+
+.baniere_image {
+        display: flex;
+        justify-content: center;
+        height: 219px;
+        width: 950px;
+        background: url('images/belle_ille.jpg') no-repeat;
+        position: relative;
+        margin-left: 5px;
+        margin-bottom: 25px;
+        box-shadow: 0px 4px 4px #1c1a19;
+        border-radius: 10px;
+        margin-top: 20px;
 }
