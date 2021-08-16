@@ -75,6 +75,10 @@
 }
 html{
         box-sizing: border-box;
+        height: 100vh;
+}
+::-webkit-scrollbar{
+        display: none;
 }
 * {
         color: white;
@@ -87,6 +91,7 @@ body {
         line-height: 1.25;
         min-height: 100vh;
         position: relative;
+        overflow-x: hidden;
 }
 
 
@@ -98,10 +103,20 @@ body {
         font-weight: 500;
         font-size: 2em;
 }
+.icon_home img{
+        padding-top: 10px;
+}
 
 .nav {
+        
+        padding: 5px;
+        width: 100vw;
+}
+header {
+        display: flex;
+        align-self: center;
         background: url("images/separateur.png") repeat-x bottom;
-        padding-bottom: 10px;
+        padding:5px;
         width: 100vw;
 }
 
@@ -199,8 +214,7 @@ li:hover:before, li:hover::after, li:hover a::before {
 
 .carousel img:hover {
         cursor: pointer;
-        transform: rotate(360deg);
-        transition: all 0.5s ease-in-out 0s;
+        transform: scale(1.1);
 }
 
 .carousel .carousel-item1 {
@@ -223,8 +237,8 @@ li:hover:before, li:hover::after, li:hover a::before {
         background: url("images/separateur.png") repeat-x top;
         bottom: 0;
         margin-top: 14%;
-        padding: 10px;
-        width: 100%;
+        padding: 15px;
+        
         transition: transform .2s;
 }
 
@@ -302,7 +316,7 @@ li:hover:before, li:hover::after, li:hover a::before {
 	box-shadow: 0px 2px 5px rgba(205, 165, 165);
 	border-radius: 5px;
 	font-size: 0.9em;
-	padding: 10px;
+	padding:0;
 	margin-top: 85px;
 	position: relative;
 	height: 50%;
