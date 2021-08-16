@@ -70,27 +70,24 @@
         }
 }
 
-@font-face {
-        font-family: 'eb_garamondregular';
-        src: url('ebgaramond-variablefont_wght-webfont.woff2') format('woff2'), url('ebgaramond-variablefont_wght-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-}
 
 * {
         box-sizing: border-box;
         color: white;
         margin: 0;
         padding: 0;
+       
 }
 
 body {
         background-color: black;
+        
 }
 
 .page {
         width: 100%;
-        font-family: eb_garamondregular;
+        height: 100vh;
+        position: relative;
 }
 
 .nav a {
@@ -105,7 +102,6 @@ body {
 .nav {
         background: url("images/separateur.png") repeat-x bottom;
         padding-bottom: 10px;
-        font-family: eb_garamondregular;
         width: 100vw;
 }
 
@@ -223,7 +219,7 @@ li:hover:before, li:hover::after, li:hover a::before {
         align-items: center;
         justify-content: space-between;
         bottom: 0;
-        padding: 30px;
+        margin-top: 210px;
         width: 100%;
         transition: transform .2s;
 }
@@ -235,36 +231,91 @@ li:hover:before, li:hover::after, li:hover a::before {
 
 /* CSS Page Blog*/
 
-.bloc_page {
-        display: flex;
+.bloc_page{
         width: 950px;
         margin: auto;
-        background-color: rgba(205, 165, 165);
+      
 }
-
 .baniere_description {
-        position: absolute;
-        bottom: 0;
-        border-radius: 0px 0px 5px 5px;
-        width: 950px;
-        height: 33px;
-        background-color: rgba(24, 24, 24, 0.8);
-        padding-top: 15px;
-        padding-left: 4px;
-        color: white;
-        font-size: 1em;
+	position: absolute;
+	bottom: 0;
+	border-radius: 0px 0px 5px 5px;
+	width: 100%;
+	height: 33px;
+	background-color: rgba(24, 24, 24, 0.8);
+	padding-top: 15px;
+	padding-left: 4px;
+	color: white;
+	font-size: 1em;
 }
 
 .baniere_image {
-        display: flex;
-        justify-content: center;
-        height: 219px;
-        width: 950px;
-        background: url('images/belle_ille.jpg') no-repeat;
-        position: relative;
-        margin-left: 5px;
-        margin-bottom: 25px;
-        box-shadow: 0px 4px 4px #1c1a19;
-        border-radius: 10px;
-        margin-top: 20px;
+	height: 219px;
+	margin-left: 5px;
+	margin-bottom: 25px;
+	box-shadow: 0px 4px 4px #1c1a19;
+	border-radius: 10px;
+	background: url('images/belle_ille.jpg') no-repeat;
+	position: relative;
+	margin-top: 20px;
+	-webkit-animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
+
+
+
+
+.section {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.article, .aside {
+	text-align: justify;
+}
+
+.article {
+	margin-right: 20px;
+	flex: 3;
+}
+
+
+.aside {
+	flex: 1.2;
+	background-color: #706b64;
+	color: white;
+	box-shadow: 0px 2px 5px #1c1a19;
+	border-radius: 5px;
+	font-size: 0.9em;
+	padding: 10px;
+	margin-top: 85px;
+	position: relative;
+	height: 50%;
+	-webkit-animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.bulle {
+	position: absolute;
+	top: 150px;
+	left: -10px;
+}
+.photo_ibra {
+	text-align: center;
+}
+
+.photo_ibra img {
+	border: 1px solid #181818;
+}
+
+.aside h1 {
+	text-align: center;
+}
+
+.aside img {
+	margin-right: 5px;
+}
+.logos {
+	text-align: center;
+}
+
