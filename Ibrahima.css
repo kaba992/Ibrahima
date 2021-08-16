@@ -73,25 +73,22 @@
         font-style: normal;
     
 }
-
-* {
+html{
         box-sizing: border-box;
+}
+* {
         color: white;
-        margin: 0;
-        padding: 0;
-        font-family: 'eb_garamond_sc12_regular';
-       
+        font-family: 'eb_garamond_sc12_regular';       
 }
 
 body {
-        background-color: black;      
-}
-
-.page {
-        width: 100%;
-        height: 100vh;
+        background-color: black; 
+        margin: 0;  
+        line-height: 1.25;
+        min-height: 100vh;
         position: relative;
 }
+
 
 .nav a {
         z-index: 1;
@@ -246,6 +243,7 @@ li:hover:before, li:hover::after, li:hover a::before {
 .baniere_description {
 	position: absolute;
 	bottom: 0;
+        box-sizing: border-box;
 	border-radius: 0px 0px 5px 5px;
 	width: 100%;
 	height: 33px;
@@ -266,9 +264,6 @@ li:hover:before, li:hover::after, li:hover a::before {
 	margin-top: 20px;
         animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
-
-
 
 
 .section {
@@ -340,7 +335,100 @@ li:hover:before, li:hover::after, li:hover a::before {
 .logos img:hover{
         cursor: pointer;
         transform: scale(1.5);
+                                                                                        /* CSS Gallerie */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
+.body_gallerie{
+        margin: 0;
+  min-height: 100vh;
+  font-size: 1rem;
+  line-height: 1.25;
+  background-color: #18222d;
+}
+.grid {
+        width: 100%;
+        max-width: 60rem;
+        margin-left: auto;
+        margin-right: auto;
+      
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      
+      .grid-block {
+        width: 50%;
+        min-height: 11.25rem;
+        padding: 1rem;
+      }
+      
+      .image-grid {
+        -webkit-transform: rotateX(45deg) rotateZ(45deg);
+        transform: rotateX(45deg) rotateZ(45deg);
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+      }
+      
+      .image-grid .tile-link:hover .tile-img {
+        top: -1rem;
+        left: -1rem;
+      }
+      
+      .image-grid .tile-img {
+        position: relative;
+        top: 0;
+        left: 0;
+        -webkit-transition-property: opacity, top, left, box-shadow;
+        transition-property: opacity, top, left, box-shadow;
+      }
+      
+      .tile-link {
+        display: block;
+      }
+      
+      .tile-link:hover .tile-img {
+        opacity: 1;
+      }
+      
+      .tile-link:hover .tile-img-link {
+        display: block;
+      }
+      
+      .tile-link:hover .tile-img-link:hover .tile-img {
+        opacity: 0.5;
+      }
+      
+      .tile-img {
+        display: block;
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        -webkit-transition-property: opacity;
+        transition-property: opacity;
+        -webkit-transition-duration: 0.125s;
+        transition-duration: 0.125s;
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+      }
+      .tile-link:hover .tile-img1 {
+        box-shadow: 5px 5px rgba(244, 170, 200, 0.4),
+          10px 10px rgba(244, 170, 200, 0.3), 15px 15px rgba(244, 170, 200, 0.2),
+          20px 20px rgba(244, 170, 200, 0.1), 25px 25px rgba(244, 170, 200, 0.05);
+      }
+      
+      .tile-link:hover .tile-img2 {
+        box-shadow: 5px 5px rgba(45, 186, 233, 0.4), 10px 10px rgba(45, 186, 233, 0.3),
+          15px 15px rgba(45, 186, 233, 0.2), 20px 20px rgba(45, 186, 233, 0.1),
+          25px 25px rgba(45, 186, 233, 0.05);
+      }
+      
+      
+      
 
                                                                                         /* CSS Contact.htlm*/
 .section_contact{
