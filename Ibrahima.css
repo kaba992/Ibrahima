@@ -104,7 +104,13 @@ body {
         font-size: 2em;
 }
 .icon_home img{
-        padding-top: 10px;
+        position: relative;
+        top: 21px;
+        left: 10px;
+        transition: .3s;
+}
+.icon_home:hover{
+        transform:scale(1.1);
 }
 
 .nav {
@@ -116,7 +122,7 @@ header {
         display: flex;
         align-self: center;
         background: url("images/separateur.png") repeat-x bottom;
-        padding:5px;
+        padding:0;
         width: 100vw;
 }
 
@@ -144,7 +150,7 @@ header {
 }
 
 .item4 {
-        animation: bounce-in-top 1.8s both;animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: bounce-in-top 1.8s both;
 }
 /*fin animation images accueil*/
 
@@ -202,7 +208,6 @@ li:hover:before, li:hover::after, li:hover a::before {
         flex-wrap: wrap;
         width: 100%;
         margin-top: 12.5%;
-        transition: all 0.5s ease-in-out 0s;
 }
 
 .carousel img {
@@ -210,11 +215,14 @@ li:hover:before, li:hover::after, li:hover a::before {
         width: 487px;
         height: 304;
         box-shadow: 1px 2px 5px rgba(205, 165, 165);
+        filter: grayscale(100%);
+        transition: all 0.2s;
 }
 
 .carousel img:hover {
         cursor: pointer;
         transform: scale(1.1);
+        filter: grayscale(0);
 }
 
 .carousel .carousel-item1 {
@@ -237,14 +245,16 @@ li:hover:before, li:hover::after, li:hover a::before {
         background: url("images/separateur.png") repeat-x top;
         bottom: 0;
         margin-top: 14%;
-        padding: 15px;
-        
+        padding:5px;
         transition: transform .2s;
 }
 
 .reseaux img:hover {
         cursor: pointer;
-        transform: scale(1.5);
+        transform: scale(1.1);
+        
+        opacity: 0.5;
+        
 }
 
                                                                         /* CSS Page Blog*/
@@ -316,7 +326,8 @@ li:hover:before, li:hover::after, li:hover a::before {
 	box-shadow: 0px 2px 5px rgba(205, 165, 165);
 	border-radius: 5px;
 	font-size: 0.9em;
-	padding:0;
+        text-align: justify;
+	padding: 5px;;
 	margin-top: 85px;
 	position: relative;
 	height: 50%;
@@ -346,105 +357,12 @@ li:hover:before, li:hover::after, li:hover a::before {
 .logos {
 	text-align: center;
 }
-.logos img:hover{
+.logos img:hover{ 
         cursor: pointer;
         transform: scale(1.5);
-                                                                                        /* CSS Gallerie */
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
 }
-.body_gallerie{
-        margin: 0;
-  min-height: 100vh;
-  font-size: 1rem;
-  line-height: 1.25;
-  background-color: #18222d;
-}
-.grid {
-        width: 100%;
-        max-width: 60rem;
-        margin-left: auto;
-        margin-right: auto;
-      
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-      
-      .grid-block {
-        width: 50%;
-        min-height: 11.25rem;
-        padding: 1rem;
-      }
-      
-      .image-grid {
-        -webkit-transform: rotateX(45deg) rotateZ(45deg);
-        transform: rotateX(45deg) rotateZ(45deg);
-        -webkit-perspective: 1000px;
-        perspective: 1000px;
-      }
-      
-      .image-grid .tile-link:hover .tile-img {
-        top: -1rem;
-        left: -1rem;
-      }
-      
-      .image-grid .tile-img {
-        position: relative;
-        top: 0;
-        left: 0;
-        -webkit-transition-property: opacity, top, left, box-shadow;
-        transition-property: opacity, top, left, box-shadow;
-      }
-      
-      .tile-link {
-        display: block;
-      }
-      
-      .tile-link:hover .tile-img {
-        opacity: 1;
-      }
-      
-      .tile-link:hover .tile-img-link {
-        display: block;
-      }
-      
-      .tile-link:hover .tile-img-link:hover .tile-img {
-        opacity: 0.5;
-      }
-      
-      .tile-img {
-        display: block;
-        width: 100%;
-        height: auto;
-        opacity: 1;
-        -webkit-transition-property: opacity;
-        transition-property: opacity;
-        -webkit-transition-duration: 0.125s;
-        transition-duration: 0.125s;
-        -webkit-transition-timing-function: ease-in;
-        transition-timing-function: ease-in;
-      }
-      .tile-link:hover .tile-img1 {
-        box-shadow: 5px 5px rgba(244, 170, 200, 0.4),
-          10px 10px rgba(244, 170, 200, 0.3), 15px 15px rgba(244, 170, 200, 0.2),
-          20px 20px rgba(244, 170, 200, 0.1), 25px 25px rgba(244, 170, 200, 0.05);
-      }
-      
-      .tile-link:hover .tile-img2 {
-        box-shadow: 5px 5px rgba(45, 186, 233, 0.4), 10px 10px rgba(45, 186, 233, 0.3),
-          15px 15px rgba(45, 186, 233, 0.2), 20px 20px rgba(45, 186, 233, 0.1),
-          25px 25px rgba(45, 186, 233, 0.05);
-      }
-      
-      
-      
 
-                                                                                        /* CSS Contact.htlm*/
-.section_contact{
-        margin-top: 12.5%;
-}                                                                                        
+                                                                /*CSS Gallerie*/
+.gallerie{
+        display: block;
+}
