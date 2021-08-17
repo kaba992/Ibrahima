@@ -409,6 +409,7 @@ li:hover:before, li:hover::after, li:hover a::before {
 }
 .photo img{
         border-radius: 10px;
+        filter:grayscale(100%);
 }
 .photo p{
         text-align: center;
@@ -421,7 +422,6 @@ li:hover:before, li:hover::after, li:hover a::before {
         bottom: 0;
         height: 0;
         text-align: center;
-        filter:grayscale(100%);
         -webkit-transition: all 0.5s;
         transition: all 0.5s
 }
