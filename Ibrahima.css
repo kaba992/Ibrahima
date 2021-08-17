@@ -64,6 +64,31 @@
 		opacity: 1;
 	}
 }
+@keyframes roll-in-left {
+        0% {
+          -webkit-transform: translateX(-800px);
+                  transform: translateX(-800px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateX(0);
+                  transform: translateX(0);
+          opacity: 1;
+        }
+      }
+@keyframes roll-in-right {
+  0% {
+    -webkit-transform: translateX(800px);
+            transform: translateX(800px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 
 @font-face {
         font-family: 'eb_garamond_sc12_regular';
@@ -215,14 +240,12 @@ li:hover:before, li:hover::after, li:hover a::before {
         width: 487px;
         height: 304;
         box-shadow: 1px 2px 5px rgba(205, 165, 165);
-        filter: grayscale(100%);
         transition: all 0.2s;
 }
 
 .carousel img:hover {
         cursor: pointer;
         transform: scale(1.1);
-        filter: grayscale(0);
 }
 
 .carousel .carousel-item1 {
@@ -363,6 +386,50 @@ li:hover:before, li:hover::after, li:hover a::before {
 }
 
                                                                 /*CSS Gallerie*/
-.gallerie{
-        display: block;
+
+.gallerie_block{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        margin: 20px;
+        transition: 0.5s;
+}
+.block1{
+        animation: roll-in-left 1s ease-out both;
+}
+.block2{
+        animation: roll-in-right 1s ease-out both;
+}
+
+.photo{
+        position: relative;
+        padding: 20px;
+        margin: 20px;
+        overflow: hidden;
+}
+.photo img{
+        border-radius: 10px;
+}
+.photo p{
+        text-align: center;
+}
+.photo .infos_hover{
+        position: absolute;
+        background:rgba(0,0,0,0.8);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 0;
+        text-align: center;
+        filter:grayscale(100%);
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s
+}
+.photo:hover .infos_hover{
+        height: 15%;
+        
+}
+.photo img:hover{
+        filter:grayscale(0);
+        transform: scale(1.1);
 }
