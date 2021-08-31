@@ -98,25 +98,24 @@
         font-style: normal;
     
 }
-html{
-        box-sizing: border-box;
-        height: 100vh;
-}
+
 ::-webkit-scrollbar{
         display: none;
 }
 * {
         color: white;
-        font-family: 'eb_garamond_sc12_regular';       
+        font-family: 'eb_garamond_sc12_regular';   
+        box-sizing: border-box;    
 }
 
 body {
-        background-color: black; 
-        margin: 0;  
+        background-color: #222831; 
+        margin: 0; 
+        padding: 0; 
         line-height: 1.25;
         min-height: 100vh;
         position: relative;
-        overflow-x: hidden;
+        
 }
 
 
@@ -128,13 +127,8 @@ body {
         font-weight: 500;
         font-size: 2em;
 }
-.icon_home img{
-        position: relative;
-        top: 21px;
-        left: 10px;
-        transition: .3s;
-}
-.icon_home:hover{
+
+.item1:hover{
         transform:scale(1.1);
 }
 
@@ -153,12 +147,13 @@ header {
 
 .nav .menu {
         list-style-type: none;
+        background-color: #222831;
         margin: 0px;
         padding: 0px;
         display: flex;
         align-items: center;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
 }
 /*animation images accueil*/
 
@@ -231,14 +226,15 @@ li:hover:before, li:hover::after, li:hover a::before {
         flex-direction: row;
         justify-content: space-around;
         flex-wrap: wrap;
-        width: 100%;
-        margin-top: 12.5%;
+        align-items: center;
+        height: 100vh;
+        
 }
 
 .carousel img {
         border-radius: 10px;
-        width: 487px;
-        height: 304;
+        width:100%;
+        height: auto;
         box-shadow: 1px 2px 5px rgba(205, 165, 165);
         transition: all 0.2s;
 }
@@ -262,13 +258,15 @@ li:hover:before, li:hover::after, li:hover a::before {
 
 .footer {
         display: flex;
+        position: absolute;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         background: url("images/separateur.png") repeat-x top;
         bottom: 0;
-        margin-top: 14%;
-        padding:5px;
+        width: 100%;
+        height: 2.5rem;
+        padding:10px;
         transition: transform .2s;
 }
 
@@ -285,7 +283,6 @@ li:hover:before, li:hover::after, li:hover a::before {
 .bloc_page{
         width: 950px;
         margin: auto;
-      
 }
 .baniere_description {
 	position: absolute;
@@ -315,12 +312,11 @@ li:hover:before, li:hover::after, li:hover a::before {
 
 .section {
 	display: flex;
-	margin-bottom: 20px;
+        flex-wrap: wrap;
+	padding-bottom: 2.5rem;
+        letter-spacing: 0.05em;
 }
 
-.article, .aside {
-	text-align: justify;
-}
 
 .article {
 	margin-right: 20px;
@@ -329,6 +325,11 @@ li:hover:before, li:hover::after, li:hover a::before {
 .ico_categorie{
         vertical-align: middle;
         margin-right: 5px;
+        transition: 0.8s;
+}
+.ico_categorie:hover{
+        cursor: pointer;
+        transform: rotate(360deg);
 }
 /*animation bloc de la page Blog*/
 .passion_photo{
@@ -349,7 +350,6 @@ li:hover:before, li:hover::after, li:hover a::before {
 	box-shadow: 0px 2px 5px rgba(205, 165, 165);
 	border-radius: 5px;
 	font-size: 0.9em;
-        text-align: justify;
 	padding: 5px;;
 	margin-top: 85px;
 	position: relative;
@@ -390,6 +390,7 @@ li:hover:before, li:hover::after, li:hover a::before {
 .gallerie_block{
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         padding: 20px;
         margin: 20px;
         transition: 0.5s;
@@ -408,8 +409,10 @@ li:hover:before, li:hover::after, li:hover a::before {
         overflow: hidden;
 }
 .photo img{
-        border-radius: 10px;
         filter:grayscale(100%);
+        box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1), 
+        0 0  0 2px rgb(255,255,255),
+        0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 .photo p{
         text-align: center;
@@ -432,4 +435,52 @@ li:hover:before, li:hover::after, li:hover a::before {
 .photo img:hover{
         filter:grayscale(0);
         transform: scale(1.1);
+}
+@media all and (max-width: 1024px) {
+	.bloc_page {
+		width: auto;
+	}
+
+	
+	nav {
+		width: auto;
+		text-align: left;
+	}
+	nav ul {
+		display: flex;
+		flex-direction: column;
+	}
+	nav a {
+		font-size: 1.3em;
+	}
+	nav li {
+		padding-left: 4px;
+	}
+	nav a:hover {
+		border-bottom: 0;
+	}
+	section {
+		flex-direction: column;
+	}
+	.baniere_image {
+		display: none;
+	}
+	aside, article {
+		width: auto;
+		margin-bottom: 15px;
+	}
+	aside img {
+		float: right;
+	}
+	p {
+		font-size: 1.3em;
+		flex-wrap: wrap;
+	}
+	.logos {
+		display: flex;
+		justify-content: center;
+	}
+	.bulle {
+		display: none;
+	}
 }
