@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Ibrahima.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="Ibrahima.js">
+    <link rel="stylesheet" type="text/css" href="Ibrahima.css">
     <title>Ibrahima</title>
 </head>
 
 <body>
 
     <header>
-        <nav class="nav">
+        <nav id="nav">
             <ul class="menu">
                 <a href="Index.html"> <img class="item1" src="icons/icons8-accueil-50.png" alt="icone maison"> </a>
                 <li class="item2"><a href="Gallerie.html">Gallerie</a></li>
@@ -24,11 +26,26 @@
     </header>
 
     <section class="section_accueil">
-        <div class="carousel">
-            <a class="carousel-item1" href="Gallerie.html"><img src="images/gallerie-minimaliste.jpg"
-                    alt="image gallerie"></a>
-            <a class="carousel-item2" href="blog.html"><img src="images/blogging.jpg " alt="image blog"></a>
-            <a class="carousel-item3" href="Contact.html"><img src="images/contact-us.jpg" alt="image contact"></a>
+        <div class="landing">
+            <div class="img_acueil">
+                <a  href="Gallerie.html"><img src="images/gallerie-minimaliste.jpg"
+                        alt="image gallerie" class="item1" ></a>
+                <div class="description_img_accueil">
+                    
+                </div>
+            </div>
+            <div class="img_acueil">
+                <a href="blog.html"><img src="images/blogging.jpg " alt="image blog" class="item2"></a>
+                <div class="description_img_accueil">
+
+                </div>
+            </div>
+            <div class="img_acueil">
+                <a href="Contact.html"><img src="images/contact-us.jpg" alt="image contact" class="item3"></a>
+                <div class="description_img_accueil">
+
+                </div>
+            </div>
         </div>
     </section>
     <footer>
