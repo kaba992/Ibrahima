@@ -98,6 +98,14 @@
         font-weight: normal;
         font-style: normal;
 }
+@font-face {
+        font-family: 'abril_fatfaceregular';
+        src: url('Fonts/Abrilfatface/abrilfatface-regular-webfont.woff2') format('woff2'),
+             url('Fonts/Abrilfatface/abrilfatface-regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
 
 ::-webkit-scrollbar {
         display: none;
@@ -133,9 +141,6 @@ body {
         font-size: 2em;
 }
 
-.item1:hover {
-        transform: scale(1.1);
-}
 
 #nav {
         padding: 5px;
@@ -161,7 +166,7 @@ header {
 }
 
 /*animation images accueil*/
-
+/*
 .item1 {
         animation: bounce-in-top 0.6s both;
 }
@@ -177,7 +182,7 @@ header {
 .item4 {
         animation: bounce-in-top 1.8s both;
 }
-
+*/
 /*fin animation images accueil*/
 
 li {
@@ -234,14 +239,18 @@ li:hover:before, li:hover::after, li:hover a::before {
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: all 0.5s;
 }
 
 .title {
         position: relative;
+        animation: scale-in-center 2s both;
 }
 
 .title span {
-        font-size: 150px;
+        color: white;
+        font-family: abril_fatfaceregular;
+        font-size: 120px;
         font-weight: 100;
         transition: 0.5s;
         will-change: transform;
@@ -280,7 +289,8 @@ li:hover:before, li:hover::after, li:hover a::before {
         bottom: 0;
         width: 100%;
         height: 3.5rem;
-        padding: 10px;
+        padding-bottom: 5px;
+        padding-top: 5px;
         transition: transform .2s;
 }
 
@@ -435,7 +445,7 @@ li:hover:before, li:hover::after, li:hover a::before {
 
 .photo img {
         filter: grayscale(100%);
-        box-shadow:
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 .photo p {
