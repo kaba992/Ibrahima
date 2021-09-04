@@ -52,72 +52,77 @@
                 animation-timing-function: ease-out;
         }
 }
+
 @keyframes scale-in-center {
-	0% {
-		-webkit-transform: scale(0);
-		transform: scale(0);
-		opacity: 1;
-	}
-	100% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-		opacity: 1;
-	}
-}
-@keyframes roll-in-left {
         0% {
-          -webkit-transform: translateX(-800px);
-                  transform: translateX(-800px);
-          opacity: 0;
+                -webkit-transform: scale(0);
+                transform: scale(0);
+                opacity: 1;
         }
         100% {
-          -webkit-transform: translateX(0);
-                  transform: translateX(0);
-          opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 1;
         }
-      }
-@keyframes roll-in-right {
-  0% {
-    -webkit-transform: translateX(800px);
-            transform: translateX(800px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
 }
 
+@keyframes roll-in-left {
+        0% {
+                -webkit-transform: translateX(-800px);
+                transform: translateX(-800px);
+                opacity: 0;
+        }
+        100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+                opacity: 1;
+        }
+}
+
+@keyframes roll-in-right {
+        0% {
+                -webkit-transform: translateX(800px);
+                transform: translateX(800px);
+                opacity: 0;
+        }
+        100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+                opacity: 1;
+        }
+}
 
 @font-face {
         font-family: 'eb_garamond_sc12_regular';
-        src: url('Fonts/ebgaramond/ebgaramondsc12-regular-webfont.woff2') format('woff2'),
-             url('Fonts/ebgaramond/ebgaramondsc12-regular-webfont.woff') format('woff');
+        src: url('Fonts/ebgaramond/ebgaramondsc12-regular-webfont.woff2') format('woff2'), url('Fonts/ebgaramond/ebgaramondsc12-regular-webfont.woff') format('woff');
         font-weight: normal;
         font-style: normal;
-    
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
         display: none;
 }
+
 * {
         color: #EEEEEE;
-        font-family: 'eb_garamond_sc12_regular';   
-        box-sizing: border-box;  
+        font-family: 'eb_garamond_sc12_regular';
+        box-sizing: border-box;
+}
+
+::before, ::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
 }
 
 body {
-        background-color: #222831; 
-        margin: 0; 
-        padding: 0; 
+        background-color: #222831;
+        margin: 0;
+        padding: 0;
         line-height: 1.25;
         min-height: 100vh;
         position: relative;
-        
 }
-
 
 #nav a {
         z-index: 1;
@@ -128,19 +133,19 @@ body {
         font-size: 2em;
 }
 
-.item1:hover{
-        transform:scale(1.1);
+.item1:hover {
+        transform: scale(1.1);
 }
 
 #nav {
-        
         padding: 5px;
         width: 100vw;
 }
+
 header {
         display: flex;
         align-self: center;
-        padding:0;
+        padding: 0;
         width: 100vw;
 }
 
@@ -154,6 +159,7 @@ header {
         flex-direction: row;
         justify-content: space-between;
 }
+
 /*animation images accueil*/
 
 .item1 {
@@ -171,6 +177,7 @@ header {
 .item4 {
         animation: bounce-in-top 1.8s both;
 }
+
 /*fin animation images accueil*/
 
 li {
@@ -220,40 +227,48 @@ li:hover:before, li:hover::after, li:hover a::before {
         width: 100%;
 }
 
-.landing {
+/* Animation Texte accueil*/
+
+.container {
+        height: 80vh;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
-        height: 100vh;
 }
 
-
-.img_acueil img {
-        border-radius: 5px;
-        width:100%;
-        height: auto;
-        box-shadow: 1px 2px 5px rgba(205, 165, 165);
-}
-.img_acueil{
-        transition: all 2s;
+.title {
+        position: relative;
 }
 
-.img_acueil img:hover {
-        cursor: pointer;
-        transform: scale(1.1);
+.title span {
+        font-size: 150px;
+        font-weight: 100;
+        transition: 0.5s;
+        will-change: transform;
+        display: inline-block;
 }
 
-.img_acueil .item1 {
-        animation: bounce-in-top 1s both;
-}
-.img_acueil .item2 {
-        animation: bounce-in-top 1.4s both;
+.s1 span {
+        transform-origin: bottom;
 }
 
-.img_acueil .item3 {
-        animation: bounce-in-top 1.6s both;
+.s2 span {
+        transform-origin: top;
+        transform: translateY(100%) rotateX(-90deg);
+}
+
+.s2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+}
+
+.title:hover .s1 span {
+        transform: translateY(-100%) rotateX(-90deg);
+}
+
+.title:hover .s2 span {
+        transform: translateY(0%) rotateX(0deg);
 }
 
 .footer {
@@ -264,129 +279,137 @@ li:hover:before, li:hover::after, li:hover a::before {
         justify-content: space-between;
         bottom: 0;
         width: 100%;
-        height: 2.5rem;
-        padding:10px;
+        height: 3.5rem;
+        padding: 10px;
         transition: transform .2s;
 }
 
 .reseaux img:hover {
         cursor: pointer;
         transform: scale(1.1);
-        
         opacity: 0.5;
-        
 }
 
-                                                                        /* CSS Page Blog*/
+/* CSS Page Blog*/
 
-.bloc_page{
+.bloc_page {
         width: 950px;
         margin: auto;
 }
+
 .baniere_description {
-	position: absolute;
-	bottom: 0;
+        position: absolute;
+        bottom: 0;
         box-sizing: border-box;
-	border-radius: 0px 0px 5px 5px;
-	width: 100%;
-	height: 33px;
-	background-color: rgba(24, 24, 24, 0.8);
-	padding: 20px;
-	color: white;
-	font-size: 1em;
+        border-radius: 0px 0px 5px 5px;
+        width: 100%;
+        height: 33px;
+        background-color: rgba(24, 24, 24, 0.8);
+        padding: 20px;
+        color: white;
+        font-size: 1em;
 }
 
 .baniere_image {
-	height: 219px;
-	margin-left: 5px;
-	margin-bottom: 25px;
-	box-shadow: 0px 4px 4px #1c1a19;
-	border-radius: 10px;
-	background: url('images/belle_ille.jpg') no-repeat;
-	position: relative;
-	margin-top: 20px;
+        height: 219px;
+        margin-left: 5px;
+        margin-bottom: 25px;
+        box-shadow: 0px 4px 4px #1c1a19;
+        border-radius: 10px;
+        background: url('images/belle_ille.jpg') no-repeat;
+        position: relative;
+        margin-top: 20px;
         animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-
 .section {
-	display: flex;
+        display: flex;
         flex-wrap: wrap;
-	padding-bottom: 2.5rem;
+        padding-bottom: 3.5rem;
         letter-spacing: 0.05em;
 }
 
-
 .article {
-	margin-right: 20px;
-	flex: 3;
+        margin-right: 20px;
+        flex: 3;
 }
-.ico_categorie{
+
+.ico_categorie {
         vertical-align: middle;
         margin-right: 5px;
         transition: 0.8s;
 }
-.ico_categorie:hover{
+
+.ico_categorie:hover {
         cursor: pointer;
         transform: rotate(360deg);
 }
+
 /*animation bloc de la page Blog*/
-.passion_photo{
+
+.passion_photo {
         animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-.passion_peche{
+
+.passion_peche {
         animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}       
-.passion_jeux{
+}
+
+.passion_jeux {
         animation: scale-in-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
 /*fin anim bloc de la page blog*/
 
 .aside {
-	flex: 1.2;
-	background-color: #706b64;
-	color: white;
-	box-shadow: 0px 2px 5px rgba(205, 165, 165);
-	border-radius: 5px;
-	font-size: 0.9em;
-	padding: 5px;;
-	margin-top: 85px;
-	position: relative;
-	height: 50%;
+        flex: 1.2;
+        background-color: #706b64;
+        color: white;
+        box-shadow: 0px 2px 5px rgba(205, 165, 165);
+        border-radius: 5px;
+        font-size: 0.9em;
+        padding: 5px;
+        ;
+        margin-top: 85px;
+        position: relative;
+        height: 50%;
         animation: scale-in-center 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
 .bulle {
-	position: absolute;
-	top: 150px;
-	left: -12px;
+        position: absolute;
+        top: 150px;
+        left: -12px;
 }
 
 .photo_ibra {
-	text-align: center;
+        text-align: center;
 }
 
 .photo_ibra img {
-	border: 1px solid #181818;
+        border: 1px solid #181818;
 }
 
 .aside h3 {
-	text-align: center;
+        text-align: center;
 }
 
 .aside img {
-	margin-right: 5px;
+        margin-right: 5px;
 }
+
 .logos {
-	text-align: center;
+        text-align: center;
 }
-.logos img:hover{ 
+
+.logos img:hover {
         cursor: pointer;
         transform: scale(1.5);
 }
 
-                                                                /*CSS Gallerie*/
+/*CSS Gallerie*/
 
-.gallerie_block{
+.gallerie_block {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -394,29 +417,34 @@ li:hover:before, li:hover::after, li:hover a::before {
         margin: 20px;
         transition: 0.5s;
 }
-.block1{
+
+.block1 {
         animation: roll-in-left 1s ease-out both;
 }
-.block2{
+
+.block2 {
         animation: roll-in-right 1s ease-out both;
 }
 
-.photo{
+.photo {
         position: relative;
         padding: 20px;
         margin: 20px;
         overflow: hidden;
 }
+
 .photo img {
-        filter:grayscale(100%);
-        box-shadow:  
+        filter: grayscale(100%);
+        box-shadow:
 }
-.photo p{
+
+.photo p {
         text-align: center;
 }
-.photo .infos_hover{
+
+.photo .infos_hover {
         position: absolute;
-        background:rgba(0,0,0,0.8);
+        background: rgba(0, 0, 0, 0.8);
         left: 0;
         right: 0;
         bottom: 0;
@@ -425,60 +453,59 @@ li:hover:before, li:hover::after, li:hover a::before {
         -webkit-transition: all 0.5s;
         transition: all 0.5s
 }
-.photo:hover .infos_hover{
+
+.photo:hover .infos_hover {
         height: 15%;
-        
 }
-.photo img:hover{
-        filter:grayscale(0);
+
+.photo img:hover {
+        filter: grayscale(0);
         transform: scale(1.1);
 }
 
 @media all and (max-width: 1024px) {
-	.bloc_page {
-		width: auto;
-	}
-
-	
-	nav {
-		width: auto;
-		text-align: left;
-	}
-	nav ul {
-		display: flex;
-		flex-direction: column;
-	}
-	nav a {
-		font-size: 1.3em;
-	}
-	nav li {
-		padding-left: 4px;
-	}
-	nav a:hover {
-		border-bottom: 0;
-	}
-	section {
-		flex-direction: column;
-	}
-	.baniere_image {
-		display: none;
-	}
-	aside, article {
-		width: auto;
-		margin-bottom: 15px;
-	}
-	aside img {
-		float: right;
-	}
-	p {
-		font-size: 1.3em;
-		flex-wrap: wrap;
-	}
-	.logos {
-		display: flex;
-		justify-content: center;
-	}
-	.bulle {
-		display: none;
-	}
+        .bloc_page {
+                width: auto;
+        }
+        nav {
+                width: auto;
+                text-align: left;
+        }
+        nav ul {
+                display: flex;
+                flex-direction: column;
+        }
+        nav a {
+                font-size: 1.3em;
+        }
+        nav li {
+                padding-left: 4px;
+        }
+        nav a:hover {
+                border-bottom: 0;
+        }
+        section {
+                flex-direction: column;
+        }
+        .baniere_image {
+                display: none;
+        }
+        aside, article {
+                width: auto;
+                margin-bottom: 15px;
+        }
+        aside img {
+                float: right;
+        }
+        p {
+                font-size: 1.3em;
+                flex-wrap: wrap;
+        }
+        .logos {
+                display: flex;
+                justify-content: center;
+        }
+        .bulle {
+                display: none;
+        }
 }
