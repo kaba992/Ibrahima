@@ -444,12 +444,8 @@ li:hover:before, li:hover::after, li:hover a::before {
 }
 
 .photo img {
-<<<<<<< HEAD
-        filter:grayscale(100%);
-=======
         filter: grayscale(100%);
         box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
->>>>>>> de1448bdce48b72c4f1f32a694f2e087ae7667ca
 }
 
 .photo p {
