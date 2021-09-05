@@ -21,12 +21,12 @@
                 opacity: 0;
         }
         50%{
-                transform: skew(15deg);
+                transform: skew(1deg,-1deg);
                 opacity: 0.5;
         }
         75%
         {
-                transform: skew(-15deg);
+                transform: skew(-1deg,1deg);
                 opacity: 0.8;
         }
         100% {
@@ -43,12 +43,12 @@
                 opacity: 0;
         }
         50%{
-                transform: skew(15deg);
+                transform: skew(1deg,-1deg);
                 opacity: 0.5;
         }
         75%
         {
-                transform: skew(-15deg);
+                transform: skew(-1deg,1deg);
                 opacity: 0.8;
         }
         100% {
@@ -305,7 +305,7 @@ header {
         margin-top: 85px;
         position: relative;
         height: 50%;
-        animation: scale-in-center 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: scale-in-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .bulle {
@@ -351,11 +351,11 @@ header {
 }
 
 .block1 {
-        animation: roll-in-left 1s ease-out both;
+        animation: roll-in-left 1.5s ease-out both;
 }
 
 .block2 {
-        animation: roll-in-right 1s ease-out both;
+        animation: roll-in-right 1.5s ease-out both;
 }
 
 .photo {
@@ -395,15 +395,36 @@ header {
         transform: scale(1.1);
 }
 /* CSS Contact */
-form{
+.formulaire{
         display: flex;
         align-items:center;
+        justify-content: flex-start;
+        height: 80VH;    
         
+}
+.titre_contact{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+}
+.formulaire .title{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        
+}
+.formulaire span{
+        font-size: 1.5em;
         
 }
 label{
         font-size: 2em;
         padding: 10px;
+}
+input{
+        border-top:none;
 }
 
 @media all and (max-width: 1024px) {
