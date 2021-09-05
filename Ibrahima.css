@@ -219,7 +219,7 @@ a::before {
 li:hover:before, li:hover::after, li:hover a::before {
         width: 100%;
 }
-
+/*
 .landing {
         display: flex;
         flex-direction: row;
@@ -255,7 +255,7 @@ li:hover:before, li:hover::after, li:hover a::before {
 .img_acueil .item3 {
         animation: bounce-in-top 1.6s both;
 }
-
+*/
 .footer {
         display: flex;
         position: absolute;
@@ -409,7 +409,6 @@ li:hover:before, li:hover::after, li:hover a::before {
 }
 .photo img {
         filter:grayscale(100%);
-        box-shadow:  
 }
 .photo p{
         text-align: center;
