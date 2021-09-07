@@ -156,7 +156,7 @@ header {
 
 
 .container {
-        height: 80vh;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -165,7 +165,8 @@ header {
 
 .title {
         position: relative;
-        animation: scale-in-center 2s both;
+        animation: scale-in-center 1.5s both;
+        
 }
 
 .title span {
@@ -180,11 +181,13 @@ header {
 
 .s1 span {
         transform-origin: bottom;
+        
 }
 
 .s2 span {
         transform-origin: top;
         transform: translateY(100%) rotateX(-90deg);
+        
 }
 
 .s2 {
@@ -345,9 +348,11 @@ header {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        padding: 20px;
-        margin: 20px;
+        padding: 50px;
         transition: 0.5s;
+}
+.gallerie_block img{
+        padding: 20px;
 }
 
 .block1 {
@@ -360,8 +365,7 @@ header {
 
 .photo {
         position: relative;
-        padding: 20px;
-        margin: 20px;
+        
         overflow: hidden;
 }
 
@@ -461,8 +465,15 @@ input{
                 float: right;
         }
         p {
-                font-size: 1.3em;
+                font-size: 0.8em;
                 flex-wrap: wrap;
+        }
+        h2{
+                font-size: 1.5em;
+        }
+        .ico_categorie{
+                width: 25px;
+                height: auto;
         }
         .logos {
                 display: flex;
@@ -470,5 +481,12 @@ input{
         }
         .bulle {
                 display: none;
+        }
+        .title span{
+                
+                font-size: 50px;
+        }
+        .footer{
+                display: block;
         }
 }

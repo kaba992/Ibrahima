@@ -6,6 +6,6 @@ spanContainers.forEach(item => {
     item.innerHTML = "";
 
     letters.forEach((el, index) => {
-        item.innerHTML += `<span style="transition-delay: ${0.07 * index}s">${el}</span>`
+        item.innerHTML += `<span style="transition-delay: ${0.05 * index}s">${el}</span>`
     })
 })
