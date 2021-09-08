@@ -155,7 +155,7 @@ header {
 }
 
 
-.container {
+.containers {
         height: 100vh;
         display: flex;
         justify-content: center;
@@ -399,35 +399,29 @@ header {
         transform: scale(1.1);
 }
 /* CSS Contact */
-.formulaire{
-        display: flex;
-        align-items:center;
-        justify-content: flex-start;
-        height: 80VH;        
-}
+
 .titre_contact{
-        
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: all 0.5s;
+        padding: 20px;
 }
-.formulaire .title{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        
-}
-.formulaire span{
-        font-size: 1.5em;
-        
+
+form{
+        display: block;
 }
 label{
         font-size: 2em;
-        padding: 10px;
+        padding: 20px;
 }
 input{
-        border-top:none;
+        height: 50px;
+        width: 400px;
+        border-radius: 10px;
+        font-weight: 200;
+}       
+.form-check form-switch{
+        vertical-align: middle;
 }
 
 @media all and (max-width: 1024px) {
