@@ -155,11 +155,15 @@ header {
         transform-origin:bottom;
 }
 
-.titre_accueil{
-       width: 100%;
-       margin: auto;
-}
 
+.titre_accueil{
+       position: absolute;
+       top: 25%;
+       left: 25%;
+       right: 25%;
+       bottom: 25%;
+       
+}       
 
 .title {
         position: relative;
