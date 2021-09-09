@@ -97,10 +97,11 @@ body {
         line-height: 1.25;
         min-height: 100vh;
         position: relative;
+        padding-bottom: 3.5rem;
 }
 
 #nav a {
-        z-index: 1;
+       
         text-decoration: none;
         color: white;
         padding: 0;
@@ -157,11 +158,13 @@ header {
 
 
 .titre_accueil{
-       position: absolute;
-       top: 25%;
-       left: 25%;
-       right: 25%;
-       bottom: 25%;
+        position:absolute;
+        
+        margin: 0;
+        top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+     
        
 }       
 
@@ -403,17 +406,17 @@ header {
 /* CSS Contact */
 
 
-
 form{
-        display: block;
+        display: flex;
         justify-content: center;
         align-items: center;
+        padding: 40px 0 0;
 }
+
 .form_identite{
         
-        padding: 40px 0 0;
         margin-top: 10px;
-        width: 50%;
+        width: 60%;
 }
 .input_name{
         font-family: eb_garamond_sc12_regular;
@@ -439,6 +442,7 @@ form{
 .label_name{
         font-family: eb_garamond_sc12_regular;
         font-size:1.5em;
+        color: gray;
 }
 .input_name:focus{
         
