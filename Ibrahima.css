@@ -1,6 +1,5 @@
 /*CSS Accueil*/
 
-
 @keyframes scale-in-center {
         0% {
                 -webkit-transform: scale(0);
@@ -20,13 +19,12 @@
                 transform: translateX(-800px);
                 opacity: 0;
         }
-        50%{
-                transform: skew(1deg,-1deg);
+        50% {
+                transform: skew(1deg, -1deg);
                 opacity: 0.5;
         }
-        75%
-        {
-                transform: skew(-1deg,1deg);
+        75% {
+                transform: skew(-1deg, 1deg);
                 opacity: 0.8;
         }
         100% {
@@ -42,13 +40,12 @@
                 transform: translateX(800px);
                 opacity: 0;
         }
-        50%{
-                transform: skew(1deg,-1deg);
+        50% {
+                transform: skew(1deg, -1deg);
                 opacity: 0.5;
         }
-        75%
-        {
-                transform: skew(-1deg,1deg);
+        75% {
+                transform: skew(-1deg, 1deg);
                 opacity: 0.8;
         }
         100% {
@@ -58,25 +55,23 @@
         }
 }
 
-
 @font-face {
         font-family: 'eb_garamond_sc12_regular';
         src: url('Fonts/ebgaramond/ebgaramondsc12-regular-webfont.woff2') format('woff2'), url('Fonts/ebgaramond/ebgaramondsc12-regular-webfont.woff') format('woff');
         font-weight: normal;
         font-style: normal;
 }
+
 @font-face {
         font-family: 'abril_fatfaceregular';
-        src: url('Fonts/Abrilfatface/abrilfatface-regular-webfont.woff2') format('woff2'),
-             url('Fonts/Abrilfatface/abrilfatface-regular-webfont.woff') format('woff');
+        src: url('Fonts/Abrilfatface/abrilfatface-regular-webfont.woff2') format('woff2'), url('Fonts/Abrilfatface/abrilfatface-regular-webfont.woff') format('woff');
         font-weight: normal;
         font-style: normal;
-    }
+}
 
 ::-webkit-scrollbar {
         display: none;
 }
-
 
 * {
         color: #EEEEEE;
@@ -101,14 +96,12 @@ body {
 }
 
 #nav a {
-       
         text-decoration: none;
         color: white;
         padding: 0;
         font-weight: 500;
         font-size: 2em;
 }
-
 
 #nav {
         padding: 15px;
@@ -133,12 +126,12 @@ header {
         justify-content: space-between;
 }
 
-
-.underline{
+.underline {
         position: relative;
         display: inline-block;
 }
-.underline::after{
+
+.underline::after {
         position: absolute;
         content: "";
         bottom: 0;
@@ -147,36 +140,32 @@ header {
         height: 2px;
         background-color: white;
         transform-origin: bottom;
-        transition:transform 0.25s ease-out;
+        transition: transform 0.25s ease-out;
         transform: scaleX(0);
         border-radius: 20px;
 }
-.underline:hover:after{
+
+.underline:hover:after {
         transform: scaleX(1);
-        transform-origin:bottom;
+        transform-origin: bottom;
 }
 
-
-.titre_accueil{
-        position:absolute;
-        
+.titre_accueil {
+        position: absolute;
         margin: 0;
         top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-     
-       
-}       
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+}
 
 .title {
         position: relative;
         animation: scale-in-center 1.5s both;
-        
 }
 
 .title span {
         color: white;
-        font-family:abril_fatfaceregular ;
+        font-family: abril_fatfaceregular;
         font-size: 120px;
         font-weight: 100;
         transition: 0.5s;
@@ -186,13 +175,11 @@ header {
 
 .s1 span {
         transform-origin: bottom;
-        
 }
 
 .s2 span {
         transform-origin: top;
         transform: translateY(100%) rotateX(-90deg);
-        
 }
 
 .s2 {
@@ -259,7 +246,6 @@ header {
         position: relative;
         margin-top: 20px;
         animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        
 }
 
 .section {
@@ -356,7 +342,8 @@ header {
         padding: 50px;
         transition: 0.5s;
 }
-.gallerie_block img{
+
+.gallerie_block img {
         padding: 20px;
 }
 
@@ -370,7 +357,6 @@ header {
 
 .photo {
         position: relative;
-        
         overflow: hidden;
 }
 
@@ -403,22 +389,22 @@ header {
         filter: grayscale(0);
         transform: scale(1.1);
 }
+
 /* CSS Contact */
 
-
-form{
+form {
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 40px 0 0;
 }
 
-.form_identite{
-        
+.form_identite {
         margin-top: 10px;
         width: 60%;
 }
-.input_name{
+
+.input_name {
         font-family: eb_garamond_sc12_regular;
         width: 100%;
         background: transparent;
@@ -428,56 +414,53 @@ form{
         font-size: 1.3em;
         padding: 7px 0;
         outline: 0;
-        
-        
 }
 
-.input_name::placeholder{
-        
+.input_name::placeholder {
         color: transparent;
 }
 
-
-
-.label_name{
+.label_name {
         font-family: eb_garamond_sc12_regular;
-        font-size:1.5em;
+        font-size: 1.5em;
         color: gray;
 }
-.input_name:focus{
-        
+
+.input_name:focus {
         border-image: linear-gradient(to right, #159957, #155799);
         border-width: 3px;
         border-image-slice: 1;
         font-weight: 500;
 }
-.checkbox{
+
+.checkbox {
         padding-top: 20px;
 }
-.message{
+
+.message {
         padding-top: 20px;
 }
-.zone_texte{
+
+.zone_texte {
         border-radius: 10px;
         background: transparent;
         border: 2px solid gray;
         width: 100%;
         transition: all 0.4s;
 }
-.zone_texte:focus{
+
+.zone_texte:focus {
         border: 0;
         border-image: linear-gradient(to right, #159957, #155799);
         border-width: 5px;
         border-image-slice: 1;
         font-weight: 500;
 }
-.btn{
+
+.btn {
         background-color: gray;
         border-color: gray;
 }
-
-
-
 
 @media all and (max-width: 1024px) {
         .bloc_page {
@@ -517,10 +500,10 @@ form{
                 font-size: 0.8em;
                 flex-wrap: wrap;
         }
-        h2{
+        h2 {
                 font-size: 1.5em;
         }
-        .ico_categorie{
+        .ico_categorie {
                 width: 25px;
                 height: auto;
         }
@@ -531,11 +514,10 @@ form{
         .bulle {
                 display: none;
         }
-        .title span{
-                
+        .title span {
                 font-size: 50px;
         }
-        .footer{
+        .footer {
                 display: block;
         }
 }
