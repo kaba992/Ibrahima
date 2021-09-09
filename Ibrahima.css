@@ -406,9 +406,11 @@ header {
 
 form{
         display: block;
+        justify-content: center;
+        align-items: center;
 }
 .form_identite{
-        position: relative;
+        
         padding: 40px 0 0;
         margin-top: 10px;
         width: 50%;
@@ -443,7 +445,7 @@ form{
         border-image: linear-gradient(to right, #159957, #155799);
         border-width: 3px;
         border-image-slice: 1;
-        font-weight: 700;
+        font-weight: 500;
 }
 .checkbox{
         padding-top: 20px;
@@ -456,12 +458,14 @@ form{
         background: transparent;
         border: 2px solid gray;
         width: 100%;
+        transition: all 0.4s;
 }
 .zone_texte:focus{
+        border: 0;
         border-image: linear-gradient(to right, #159957, #155799);
-        border-width: 3px;
+        border-width: 5px;
         border-image-slice: 1;
-        font-weight: 700;
+        font-weight: 500;
 }
 .btn{
         background-color: gray;
