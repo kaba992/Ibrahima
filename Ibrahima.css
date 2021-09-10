@@ -474,7 +474,9 @@ form {
         #nav a {
                 font-size: 20px;
         }
-       
+       .title span{
+               font-size: 35px;
+       }
         section {
                 flex-direction: column;
         }
@@ -511,13 +513,12 @@ form {
         .bulle {
                 display: none;
         }
-        .title span {
-                font-size: 50px;
-        }
+        
         .footer {
                 display: flex;
+                
                 align-items: center;
-                padding: 0;
+                padding:15px;
                 height: 3.5rem;
         }
 }
