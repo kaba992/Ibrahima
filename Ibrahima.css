@@ -89,6 +89,7 @@ body {
         background-color: #222831;
         margin: 0;
         padding: 0;
+        width: 100%;
         line-height: 1.25;
         min-height: 100vh;
         position: relative;
@@ -205,8 +206,7 @@ header {
         bottom: 0;
         width: 100%;
         height: 3.5rem;
-        padding-bottom: 5px;
-        padding-top: 5px;
+        padding: 15px;
         transition: transform .2s;
 }
 
@@ -251,7 +251,6 @@ header {
 .section {
         display: flex;
         flex-wrap: wrap;
-        padding-bottom: 3.5rem;
         letter-spacing: 0.05em;
 }
 
@@ -466,23 +465,11 @@ form {
         .bloc_page {
                 width: auto;
         }
-        nav {
-                width: auto;
-                text-align: left;
+        
+        #nav a {
+                font-size: 20px;
         }
-        nav ul {
-                display: flex;
-                flex-direction: column;
-        }
-        nav a {
-                font-size: 1.3em;
-        }
-        nav li {
-                padding-left: 4px;
-        }
-        nav a:hover {
-                border-bottom: 0;
-        }
+       
         section {
                 flex-direction: column;
         }
@@ -518,6 +505,9 @@ form {
                 font-size: 50px;
         }
         .footer {
-                display: block;
+                display: flex;
+                align-items: center;
+                padding: 0;
+                height: 3.5rem;
         }
 }
