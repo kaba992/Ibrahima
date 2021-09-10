@@ -344,6 +344,8 @@ header {
 
 .gallerie_block img {
         padding: 20px;
+        width: 487px;
+        height: auto;
 }
 
 .block1 {
@@ -472,6 +474,11 @@ form {
        
         section {
                 flex-direction: column;
+        }
+        .gallerie_block img {
+                padding: 20px;
+                width: 320px;
+                height: auto;
         }
         .baniere_image {
                 display: none;
