@@ -480,6 +480,9 @@ form {
         section {
                 flex-direction: column;
         }
+        .gallerie_block{
+                width: 100%;
+        }
         .gallerie_block img {
                 padding: 20px;
                 width: 320px;
