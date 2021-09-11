@@ -147,9 +147,9 @@ nav .menu {
         list-style-type: none;
         padding: 0;
         margin: 0;
-        
 }
-.menu a{
+
+.menu a {
         color: white;
         padding-right: 10px;
 }
@@ -191,23 +191,22 @@ nav .menu {
         transform: translate(-50%, -50%);
         flex-wrap: wrap;
         padding: 0;
-      
 }
-span{
-        transition: all 1s ease; 
+
+span {
+        transition: all 0.8s ease-in-out;
 }
 
 span.fades {
         color: white;
-        font-family: abril_fatfaceregular;
+        font-family: 'Alumni Sans', sans-serif;
         font-size: 5rem;
-        font-weight: 300;
+        font-weight: 700;
         letter-spacing: 0.5rem;
         opacity: 1;
         animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        
-      
 }
+
 
 .footer {
         display: flex;
@@ -484,7 +483,7 @@ form {
                 width: 25px;
                 height: auto;
         }
-        nav .menu{
+        nav .menu {
                 align-items: center;
         }
         #nav a {
