@@ -154,14 +154,30 @@ header {
         transform-origin: bottom;
 }
 
-.titre_accueil {
-        position: absolute;
-        margin: 0;
-        top: 50%;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-}
 
+.accueil{
+        height: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 50px;
+       
+}
+.accueil img{
+        width: 300px;
+        height: auto;
+        
+       
+}
+.accueil img:hover{
+        
+}
 .title {
         position: relative;
         animation: scale-in-center 1.5s both;
@@ -224,6 +240,7 @@ header {
 .bloc_page {
         width: 950px;
         margin: auto;
+        padding-bottom: 50px;
 }
 
 .baniere_description {
@@ -479,6 +496,17 @@ form {
        }
         section {
                 flex-direction: column;
+        }
+        .accueil{
+                display: flex;
+                justify-content:s;
+                padding: 0 10px;
+
+        }
+                
+        .accueil img{
+                display: none;
+               
         }
         .gallerie_block{
                 width: 100%;
