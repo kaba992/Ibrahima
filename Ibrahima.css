@@ -75,7 +75,7 @@
 
 * {
         color: #EEEEEE;
-        font-family: 'eb_garamond_sc12_regular';
+        font-family: 'Alumni Sans', sans-serif;
         box-sizing: border-box;
 }
 
@@ -95,20 +95,29 @@ body {
         position: relative;
         padding-bottom: 3.5rem;
 }
-section{
+
+section {
         width: 100%;
 }
 
-#nav a {
+#Home {
+        background-image: url("/images/splash.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center center right;
+        background-color: #e8e4e6;
+}
+
+nav a {
         text-decoration: none;
         color: white;
         padding: 0;
+        line-height: 22px;
         font-weight: 500;
         font-size: 2em;
 }
 
-#nav {
-        padding: 15px;
+nav {
         width: 100vw;
 }
 
@@ -119,15 +128,35 @@ header {
         width: 100vw;
 }
 
-#nav .menu {
-        list-style-type: none;
-        background-color: #222831;
+nav .menu {
+        background-color: transparent;
         margin: 0px;
         padding: 0px;
         display: flex;
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
+        padding: 20px;
+}
+
+.menu ul {
+        width: 100%;
+        display: flex;
+        text-decoration: none;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        
+}
+.menu a{
+        color: white;
+        padding-right: 10px;
+}
+
+.home img {
+        width: 35px;
+        height: auto;
 }
 
 .underline {
@@ -154,66 +183,30 @@ header {
         transform-origin: bottom;
 }
 
-
-.accueil{
-        height: 80%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 0 50px;
-       
-}
-.accueil img{
-        width: 300px;
+.titre_accueil {
         height: auto;
-        
-       
+        position: absolute;
+        top: 26%;
+        left: 34%;
+        transform: translate(-50%, -50%);
+        flex-wrap: wrap;
+        padding: 0;
+      
 }
-.accueil img:hover{
-        
-}
-.title {
-        position: relative;
-        animation: scale-in-center 1.5s both;
+span{
+        transition: all 1s ease; 
 }
 
-.title span {
+span.fades {
         color: white;
         font-family: abril_fatfaceregular;
-        font-size: 120px;
-        font-weight: 100;
-        transition: 0.5s;
-        will-change: transform;
-        display: inline-block;
-}
-
-.s1 span {
-        transform-origin: bottom;
-}
-
-.s2 span {
-        transform-origin: top;
-        transform: translateY(100%) rotateX(-90deg);
-}
-
-.s2 {
-        position: absolute;
-        top: 0;
-        left: 0;
-}
-
-.title:hover .s1 span {
-        transform: translateY(-100%) rotateX(-90deg);
-}
-
-.title:hover .s2 span {
-        transform: translateY(0%) rotateX(0deg);
+        font-size: 5rem;
+        font-weight: 300;
+        letter-spacing: 0.5rem;
+        opacity: 1;
+        animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        
+      
 }
 
 .footer {
@@ -487,28 +480,32 @@ form {
         .bloc_page {
                 width: auto;
         }
-        
+        .home img {
+                width: 25px;
+                height: auto;
+        }
+        nav .menu{
+                align-items: center;
+        }
         #nav a {
                 font-size: 20px;
         }
-       .title span{
-               font-size: 35px;
-       }
+        span.fades {
+                font-size: 35px;
+                letter-spacing: 0.2rem;
+        }
         section {
                 flex-direction: column;
         }
-        .accueil{
+        .accueil {
                 display: flex;
-                justify-content:s;
+                justify-content: s;
                 padding: 0 10px;
-
         }
-                
-        .accueil img{
+        .accueil img {
                 display: none;
-               
         }
-        .gallerie_block{
+        .gallerie_block {
                 width: 100%;
         }
         .gallerie_block img {
@@ -544,12 +541,10 @@ form {
         .bulle {
                 display: none;
         }
-        
         .footer {
                 display: flex;
-                
                 align-items: center;
-                padding:15px;
+                padding: 15px;
                 height: 3.5rem;
         }
 }

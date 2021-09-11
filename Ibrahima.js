@@ -1,11 +1,26 @@
-const spanContainers = document.querySelectorAll('.title div');
+const text =document.querySelector(".titre");
+const strText = text.textContent;
+console.log(strText);
+const splitText = strText.split("");
+text.textContent = "";
+for ( let i=0; i < splitText.length; i++){
+    text.innerHTML += "<span>" + splitText[i] + "</span>";
+}
 
-spanContainers.forEach(item => {
+let char = 0;
+let timer = setInterval(onTick, 100);
 
-    const letters = item.children[0].textContent.split('');
-    item.innerHTML = "";
-
-    letters.forEach((el, index) => {
-        item.innerHTML += `<span style="transition-delay: ${0.05 * index}s">${el}</span>`
-    })
-})
+function onTick (){
+    const span = text.querySelectorAll('span')[char];
+    console.log(span);
+    span.classList.add('fades');
+    char++
+    if (char === splitText.length){
+        complete();
+        return;
+    }
+}
+function complete (){
+    clearInterval(timer)
+    timer = null;
+}
