@@ -187,7 +187,7 @@ nav .menu {
         height: auto;
         position: absolute;
         top: 26%;
-        left: 34%;
+        left: 17%;
         transform: translate(-50%, -50%);
         flex-wrap: wrap;
         padding: 0;
@@ -356,7 +356,7 @@ span.fades {
 
 .gallerie_block img {
         padding: 20px;
-        width: 487px;
+        width: 800px;
         height: auto;
 }
 
@@ -374,7 +374,7 @@ span.fades {
 }
 
 .photo img {
-        filter: grayscale(100%);
+        
         box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
@@ -385,6 +385,8 @@ span.fades {
 .photo .infos_hover {
         position: absolute;
         background: rgba(0, 0, 0, 0.8);
+        font-size: 1.5rem;
+        font-weight: 300;
         left: 0;
         right: 0;
         bottom: 0;
@@ -489,6 +491,15 @@ form {
         #nav a {
                 font-size: 20px;
         }
+        .titre_accueil {
+                height: auto;
+                position: absolute;
+                top: 26%;
+                left: 34%;
+                transform: translate(-50%, -50%);
+                flex-wrap: wrap;
+                padding: 0;
+        }
         span.fades {
                 font-size: 35px;
                 letter-spacing: 0.2rem;
@@ -535,6 +546,7 @@ form {
         }
         .logos {
                 display: flex;
+                align-items: center;
                 justify-content: center;
         }
         .bulle {
@@ -542,8 +554,14 @@ form {
         }
         .footer {
                 display: flex;
+                position: absolute;
+                flex-direction: row;
                 align-items: center;
-                padding: 15px;
+                justify-content: space-between;
+                bottom: 0;
+                width: 100%;
                 height: 3.5rem;
+                padding: 15px;
+                transition: transform .2s;
         }
 }
