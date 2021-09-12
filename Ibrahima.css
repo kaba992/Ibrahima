@@ -4,7 +4,12 @@
         0% {
                 -webkit-transform: scale(0);
                 transform: scale(0);
-                opacity: 1;
+                opacity: 0;
+        }
+        50% {
+                -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+                opacity: 0.5;
         }
         100% {
                 -webkit-transform: scale(1);
@@ -79,6 +84,7 @@
         box-sizing: border-box;
 }
 
+
 ::before, ::after {
         box-sizing: border-box;
         margin: 0;
@@ -86,7 +92,7 @@
 }
 
 body {
-        background-color: #222831;
+        background-color: #1e3942;
         margin: 0;
         padding: 0;
         width: 100%;
@@ -194,7 +200,7 @@ nav .menu {
 }
 
 span {
-        transition: all 0.8s ease-in-out;
+        transition: all 0.5s ease-in-out;
 }
 
 span.fades {
@@ -203,8 +209,7 @@ span.fades {
         font-size: 5rem;
         font-weight: 700;
         letter-spacing: 0.5rem;
-        opacity: 1;
-        animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: scale-in-center cubic-bezier(0.250, 0.460, 0.450, 0.940) ease-in-out;
 }
 
 
@@ -269,6 +274,8 @@ span.fades {
 .article {
         margin-right: 20px;
         flex: 3;
+        transition: animation 1.5s ease;
+        transition-delay: 0.5s;
 }
 
 .ico_categorie {
@@ -285,15 +292,18 @@ span.fades {
 /*animation bloc de la page Blog*/
 
 .passion_photo {
-        animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+       
 }
 
 .passion_peche {
         animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        
 }
 
 .passion_jeux {
-        animation: scale-in-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        
 }
 
 /*fin anim bloc de la page blog*/
@@ -310,7 +320,8 @@ span.fades {
         margin-top: 85px;
         position: relative;
         height: 50%;
-        animation: scale-in-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        
 }
 
 .bulle {
