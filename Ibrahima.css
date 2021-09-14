@@ -115,7 +115,6 @@ section {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top center;
-        
 }
 
 nav a {
@@ -248,8 +247,7 @@ span.fades:hover {
         padding-bottom: 50px;
 }
 
-
-/*.ico_categorie {
+.ico_categorie {
         vertical-align: middle;
         margin-right: 5px;
         transition: 0.8s;
@@ -259,7 +257,7 @@ span.fades:hover {
         cursor: pointer;
         transform: rotateY(180deg);
 }
-*/
+
 
 /*animation bloc de la page Blog*/
 
@@ -273,7 +271,6 @@ span.fades:hover {
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 30px;
-       
 }
 
 .passion_peche {
@@ -289,9 +286,8 @@ span.fades:hover {
         flex-wrap: wrap;
         padding: 30px;
 }
-        
 
-.text_photo, .text_peche, .text_jeux{
+.text_photo, .text_peche, .text_jeux {
         width: 60%;
 }
 
