@@ -83,11 +83,11 @@
         font-family: 'Alumni Sans', sans-serif;
         box-sizing: border-box;
 }
-a{
+
+a {
         text-decoration: none;
         list-style-type: none;
 }
-
 
 ::before, ::after {
         box-sizing: border-box;
@@ -215,12 +215,11 @@ span.fades {
         letter-spacing: 0.5rem;
         animation: scale-in-center cubic-bezier(0.250, 0.460, 0.450, 0.940) ease-in-out;
 }
-span.fades:hover{
+
+span.fades:hover {
         transform: scale(1.1);
         cursor: pointer;
 }
-
-
 
 .footer {
         display: flex;
@@ -234,15 +233,12 @@ span.fades:hover{
         padding: 15px;
         transition: transform .2s;
 }
-.reseaux p{
+
+.reseaux p {
         font-size: 1.3rem;
         font-weight: 600;
         padding-right: 5px;
-        
-       
 }
-
-
 
 /* CSS Page Blog*/
 
@@ -252,45 +248,8 @@ span.fades:hover{
         padding-bottom: 50px;
 }
 
-.baniere_description {
-        position: absolute;
-        bottom: 0;
-        box-sizing: border-box;
-        border-radius: 0px 0px 5px 5px;
-        width: 100%;
-        height: 33px;
-        background-color: rgba(24, 24, 24, 0.8);
-        padding: 20px;
-        color: white;
-        font-size: 1em;
-}
 
-.baniere_image {
-        height: 219px;
-        margin-left: 5px;
-        margin-bottom: 25px;
-        box-shadow: 0px 4px 4px #1c1a19;
-        border-radius: 10px;
-        background: url('images/belle_ille.jpg') no-repeat;
-        position: relative;
-        margin-top: 20px;
-        animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-.section {
-        display: flex;
-        flex-wrap: wrap;
-        letter-spacing: 0.05em;
-}
-
-.article {
-        margin-right: 20px;
-        flex: 3;
-        transition: animation 1.5s ease;
-        transition-delay: 0.5s;
-}
-
-.ico_categorie {
+/*.ico_categorie {
         vertical-align: middle;
         margin-right: 5px;
         transition: 0.8s;
@@ -298,74 +257,45 @@ span.fades:hover{
 
 .ico_categorie:hover {
         cursor: pointer;
-        transform: rotate(360deg);
+        transform: rotateY(180deg);
 }
+*/
 
 /*animation bloc de la page Blog*/
 
+.illust_photo img {
+        width: 400px;
+        height: auto;
+}
+
 .passion_photo {
-        animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 30px;
        
 }
 
 .passion_peche {
-        animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 30px;
 }
 
 .passion_jeux {
-        animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 30px;
+}
         
+
+.text_photo, .text_peche, .text_jeux{
+        width: 60%;
 }
 
 /*fin anim bloc de la page blog*/
-
-.aside {
-        flex: 1.2;
-        background-color: #706b64;
-        color: white;
-        box-shadow: 0px 2px 5px rgba(205, 165, 165);
-        border-radius: 5px;
-        font-size: 0.9em;
-        padding: 5px;
-        ;
-        margin-top: 85px;
-        position: relative;
-        height: 50%;
-        animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        
-}
-
-.bulle {
-        position: absolute;
-        top: 150px;
-        left: -12px;
-}
-
-.photo_ibra {
-        text-align: center;
-}
-
-.photo_ibra img {
-        border: 1px solid #181818;
-}
-
-.aside h3 {
-        text-align: center;
-}
-
-.aside img {
-        margin-right: 5px;
-}
-
-.logos {
-        text-align: center;
-}
-
-.logos img:hover {
-        cursor: pointer;
-        transform: scale(1.5);
-}
 
 /*CSS Gallerie*/
 
@@ -397,7 +327,6 @@ span.fades:hover{
 }
 
 .photo img {
-        
         box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
@@ -574,6 +503,10 @@ form {
         }
         .bulle {
                 display: none;
+        }
+        .illust_photo img {
+                width: 250px;
+                height: auto;
         }
         .footer {
                 display: flex;
