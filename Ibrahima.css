@@ -95,6 +95,11 @@ a {
         padding: 0;
 }
 
+html {
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+}
+
 body {
         background-color: #1e3942;
         margin: 0;
@@ -104,40 +109,39 @@ body {
         padding-bottom: 3.5rem;
         overflow: hidden;
 }
-.containers{
+
+.containers {
         width: 100%;
         height: 100%;
         overflow-y: scroll;
-        scroll-behavior: smooth;
-        scroll-snap-type: y mandatory;
 }
 
 section {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       justify-content: center;
-       width: 100%;
-       height: 100vh;
-       padding: 30px;
-       scroll-snap-align: center ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        padding: 30px;
+        scroll-snap-align: center;
 }
-section#home{
+
+section#home {
         background-image: url("/images/splash.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         background-color: #e8e4e6;
 }
-section#gallerie{
 
+section#gallerie {
+        background-color: ;
 }
-section#blog{
 
-}
-section#contact{
+section#blog {}
 
-}
+section#contact {}
 
 nav a {
         text-decoration: none;
@@ -167,7 +171,6 @@ nav a {
         padding: 0;
         margin: 0;
 }
-     
 
 .menu a {
         color: white;
@@ -178,7 +181,6 @@ nav a {
         width: 35px;
         height: auto;
 }
-
 
 .underline {
         position: relative;
@@ -249,13 +251,6 @@ span.fades:hover {
 
 /* CSS Page Blog*/
 
-.bloc_page {
-        width: 950px;
-        margin: auto;
-        padding-bottom: 50px;
-}
-
-
 /*.ico_categorie {
         vertical-align: middle;
         margin-right: 5px;
@@ -279,26 +274,21 @@ span.fades:hover {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        
-       
 }
 
 .passion_peche {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        
 }
 
 .passion_jeux {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-       
 }
-        
 
-.text_photo, .text_peche, .text_jeux{
+.text_photo, .text_peche, .text_jeux {
         width: 50%;
 }
 
@@ -475,7 +465,6 @@ form {
         .accueil img {
                 display: none;
         }
-        
         .gallerie_block img {
                 display: none;
                 padding: 20px;

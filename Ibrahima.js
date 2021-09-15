@@ -1,3 +1,5 @@
+//Animation Titre
+
 const text = document.querySelector(".titre");
 const strText = text.textContent;
 console.log(strText);
@@ -24,3 +26,13 @@ function complete() {
     clearInterval(timer)
     timer = null;
 }
+//Animation défilement pages
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
