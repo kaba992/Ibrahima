@@ -67,20 +67,13 @@
         font-style: normal;
 }
 
-@font-face {
-        font-family: 'abril_fatfaceregular';
-        src: url('Fonts/Abrilfatface/abrilfatface-regular-webfont.woff2') format('woff2'), url('Fonts/Abrilfatface/abrilfatface-regular-webfont.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-}
-
 ::-webkit-scrollbar {
         display: none;
 }
 
 * {
         color: #EEEEEE;
-        font-family: 'Alumni Sans', sans-serif;
+        font-family: 'eb_garamond_sc12_regular', sans-serif;
         box-sizing: border-box;
 }
 
@@ -101,12 +94,12 @@ html {
 }
 
 body {
+        position: relative;
         background-color: #1e3942;
         margin: 0;
         padding: 0;
         line-height: 1.25;
         height: 100vh;
-        padding-bottom: 3.5rem;
         overflow: hidden;
 }
 
@@ -132,24 +125,23 @@ section#home {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        background-color: #e8e4e6;
 }
 
-section#gallerie {
-        background-color: ;
-}
+section#gallerie {}
 
 section#blog {}
 
 section#contact {}
 
-nav a {
+.menu a {
+        font-family: 'Alumni sans', sans-serif;
         text-decoration: none;
         color: white;
         padding: 0;
         line-height: 22px;
         font-weight: 500;
         font-size: 2em;
+        padding-right: 10px;
 }
 
 .menu {
@@ -170,11 +162,6 @@ nav a {
         list-style-type: none;
         padding: 0;
         margin: 0;
-}
-
-.menu a {
-        color: white;
-        padding-right: 10px;
 }
 
 .home img {
@@ -211,6 +198,9 @@ nav a {
         flex-wrap: wrap;
         padding: 0;
 }
+.titre_accueil h3{
+        font-family: 'Alumni Sans', sans-serif;
+}
 
 span {
         transition: all 0.5s ease-in-out;
@@ -231,6 +221,7 @@ span.fades:hover {
 }
 
 .footer {
+        font-family: 'Alumni sans', sans-serif;
         display: flex;
         position: absolute;
         flex-direction: row;
@@ -238,7 +229,6 @@ span.fades:hover {
         justify-content: flex-end;
         bottom: 0;
         width: 100%;
-        height: 3.5rem;
         padding: 15px;
         transition: transform .2s;
 }
@@ -272,24 +262,25 @@ span.fades:hover {
 
 .passion_photo {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
 }
 
 .passion_peche {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
 }
 
 .passion_jeux {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
 }
 
 .text_photo, .text_peche, .text_jeux {
-        width: 50%;
+        width: 60%;
+        letter-spacing: 0.05rem;
 }
 
 /*fin anim bloc de la page blog*/
