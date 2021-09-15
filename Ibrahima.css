@@ -95,27 +95,53 @@ a {
         padding: 0;
 }
 
+html {
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+}
+
 body {
         background-color: #1e3942;
         margin: 0;
         padding: 0;
-        width: 100%;
         line-height: 1.25;
-        min-height: 100vh;
-        position: relative;
+        height: 100vh;
         padding-bottom: 3.5rem;
+        overflow: hidden;
+}
+
+.containers {
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
 }
 
 section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 100%;
+        height: 100vh;
+        padding: 30px;
+        scroll-snap-align: center;
 }
 
-#Home {
+section#home {
         background-image: url("/images/splash.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: top center;
+        background-position: center center;
+        background-color: #e8e4e6;
 }
+
+section#gallerie {
+        background-color: ;
+}
+
+section#blog {}
+
+section#contact {}
 
 nav a {
         text-decoration: none;
@@ -126,33 +152,21 @@ nav a {
         font-size: 2em;
 }
 
-nav {
-        width: 100vw;
-}
-
-header {
-        display: flex;
-        align-self: center;
-        padding: 0;
-        width: 100vw;
-}
-
-nav .menu {
-        background-color: transparent;
+.menu {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1;
         margin: 0px;
-        padding: 0px;
+        padding: 20px;
+        background-color: transparent;
         display: flex;
         align-items: center;
-        flex-direction: row;
         justify-content: space-between;
-        padding: 20px;
 }
 
 .menu ul {
-        width: 100%;
-        display: flex;
         text-decoration: none;
-        justify-content: space-between;
         list-style-type: none;
         padding: 0;
         margin: 0;
@@ -193,11 +207,7 @@ nav .menu {
 }
 
 .titre_accueil {
-        height: auto;
-        position: absolute;
-        top: 26%;
-        left: 17%;
-        transform: translate(-50%, -50%);
+        display: inline-block;
         flex-wrap: wrap;
         padding: 0;
 }
@@ -241,13 +251,7 @@ span.fades:hover {
 
 /* CSS Page Blog*/
 
-.bloc_page {
-        width: 950px;
-        margin: auto;
-        padding-bottom: 50px;
-}
-
-.ico_categorie {
+/*.ico_categorie {
         vertical-align: middle;
         margin-right: 5px;
         transition: 0.8s;
@@ -262,7 +266,7 @@ span.fades:hover {
 /*animation bloc de la page Blog*/
 
 .illust_photo img {
-        width: 400px;
+        width: 350px;
         height: auto;
 }
 
@@ -270,25 +274,22 @@ span.fades:hover {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 30px;
 }
 
 .passion_peche {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 30px;
 }
 
 .passion_jeux {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 30px;
 }
 
 .text_photo, .text_peche, .text_jeux {
-        width: 60%;
+        width: 50%;
 }
 
 /*fin anim bloc de la page blog*/
@@ -299,13 +300,13 @@ span.fades:hover {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        padding: 50px;
+        padding-bottom: 50px;
         transition: 0.5s;
 }
 
 .gallerie_block img {
         padding: 20px;
-        width: 800px;
+        width: 400px;
         height: auto;
 }
 
@@ -453,7 +454,8 @@ form {
                 letter-spacing: 0.2rem;
         }
         section {
-                flex-direction: column;
+                display: block;
+                flex-wrap: wrap;
         }
         .accueil {
                 display: flex;
@@ -463,10 +465,8 @@ form {
         .accueil img {
                 display: none;
         }
-        .gallerie_block {
-                width: 100%;
-        }
         .gallerie_block img {
+                display: none;
                 padding: 20px;
                 width: 320px;
                 height: auto;

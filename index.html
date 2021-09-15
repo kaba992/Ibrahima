@@ -7,42 +7,276 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Ibrahima.js">
     <link rel="stylesheet" type="text/css" href="Ibrahima.css">
     <title>Ibrahima</title>
 </head>
 
-<body id="Home">
-    <header>
-        <nav>
-            <div class="menu">
-                <div class="home">
-                    <a href="Index.html"> <img class="underline" src="icons/icons8-accueil-50.png" alt="icone maison">
-                    </a>
+<body>
+    <div class="containers">
+        <header>
+            <nav>
+                <div class="menu">
+                    <div class="home">
+                        <a href="#home"> <img class="underline" src="icons/icons8-accueil-50.png" alt="icone maison">
+                        </a>
+                    </div>
+                    <div class="nav-right">
+                        <ul>
+                            <li><a href="#home"></a></li>
+                            <li class="underline"><a href="#gallerie">Gallerie</a></li>
+                            <li class="underline"><a href="#blog">Blog</a></li>
+                            <li class="underline"><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="nav-right">
-                    <ul>
-                        <li class="underline"><a href="Gallerie.html">Gallerie</a></li>
-                        <li class="underline"><a href="blog.html" >Blog</a></li>
-                        <li class="underline"><a href="Contact.html" >Contact</a></li>
-                    </ul>
+            </nav>
+        </header>
+
+
+        <section id="home">
+            <div class="accueil">
+                <div class="titre_accueil">
+                    <h1 class="titre">KABA IBRAHIMA.</h1><br>
+                    <h3 class="titre_sec">Apprentis Dev Fullstack</h3>
+                </div>
+
+            </div>
+        </section>
+        <section id="gallerie">
+            <div class="gallerie_block">
+                <div class="block1">
+                    <div class="photo">
+                        <a href="Photos/Mer_belle_ille.jpg"><img src="Photos/Mer_belle_ille.jpg"
+                                alt="Mer_belle_ille"></a>
+                        <div class="infos_hover">
+                            <p>Plage de Belle-Ile-en-Mer</p>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <a href="Photos/Escaliers_Marseille.jpg"><img src="Photos/Escaliers_Marseille.jpg"
+                                alt="Escaliers_Marseille"></a>
+                        <div class="infos_hover">
+                            <p>Les Escaliers du cours Julien</p>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <a href="Photos/Maisons_Milos.jpg"><img src="Photos/Maisons_Milos.jpg"
+                                alt="Gorges_verdon_feuillage"></a>
+                        <div class="infos_hover">
+                            <p>Maison en bord de mer</p>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <a href="Photos/Champs_Provins.jpg"><img src="Photos/Champs_Provins.jpg"
+                                alt="Champs_Provins"></a>
+                        <div class="infos_hover">
+                            <p>Champs route Provins</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="block2">
+                    <div class="photo">
+                        <a href="Photos/Bateau_Amorgos.jpg"><img src="Photos/Bateau_Amorgos.jpg"
+                                alt="Mer_Marseille"></a>
+                        <div class="infos_hover">
+                            <p>Couché de soleil Amorgos</p>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <a href="Photos/vu_mer_chapelle_amorgos.jpg"><img src="Photos/vu_mer_chapelle_amorgos.jpg"
+                                alt="Petit_Port_Marseille"></a>
+                        <div class="infos_hover">
+                            <p>Vue sur la Mer Amorgos</p>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <a href="Photos/Théatre_Milos.jpg"><img src="Photos/Théatre_Milos.jpg"
+                                alt="Plongeoir_st_malo"></a>
+                        <div class="infos_hover">
+                            <p>Théatre_Milos</p>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <a href="Photos/Vue_calanques.jpg"><img src="Photos/Vue_calanques.jpg" alt="Vue_calanques"></a>
+                        <div class="infos_hover">
+                            <p>Point de vue calanques Marseille</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="block3">
+                    <div class="photo">
+                        <a href="Photos/Couché_soleil_milos.jpg"><img src="Photos/Couché_soleil_milos.jpg"
+                                alt="Plongeoir_st_malo"></a>
+                        <div class="infos_hover">
+                            <p>Couché de soleil Milos</p>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <a href="Photos/Petit_Port_Marseille.jpg"><img src="Photos/Petit_Port_Marseille.jpg"
+                                alt="Petit port marseille"></a>
+                        <div class="infos_hover">
+                            <p>Petit port Marseille</p>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <a href="Photos/Mer_Marseille.jpg"><img src="Photos/Mer_Marseille.jpg" alt="Vue_calanques"></a>
+                        <div class="infos_hover">
+                            <p>Couché de soleil Marseille</p>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <a href="Photos/Plongeoir_st_malo.jpg"><img src="Photos/Plongeoir_st_malo.jpg"
+                                alt="Plongeoir_st_malo"></a>
+                        <div class="infos_hover">
+                            <p>Plongeoir St Malo</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
+        </section>
+        <section id="blog">
+            <article class="article">
+                <div class="passion_photo">
 
+                    <div class="text_photo">
+                        <h1><img src="images/icons8-appareil-photo-48.png" alt="icone appareil photo"
+                                class="ico_categorie" />Ma passion pour la photo</h1>
+                        <p>orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                            dolor.
+                            Aenean
+                            massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                            mus.
+                            Donec
+                            quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+                            quis
+                            enim.
+                            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+                            rhoncus
+                            ut,
+                            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
+                            tincidunt.
+                            Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean
+                            leo
+                            ligula,
+                            porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+                            viverra
+                            quis,
+                            feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+                            Aenean
+                            imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam
+                            eget
+                            dui. Etiam
+                        </p>
+                    </div>
+                    <div class="illust_photo">
+                        <img src="/Illustrations/illustration_photo.png" alt="Illustration photo">
 
-    <section>
-        <div class="accueil">
-            <div class="titre_accueil">
-                <h1 class="titre">KABA IBRAHIMA.</h1>
-                <h3 class="titre_sec">Apprentis Dev Fullstack</h3>
-            </div>
+                    </div>
+                </div>
+                <div class="passion_peche">
+                    <div class="text_peche">
+                        <h1><img src="images/icons8-roach-48.png" alt="icone poisson" class="ico_categorie" />Ma
+                            passion
+                            pour la
+                            peche</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                            dolor.
+                            Aenean
+                            massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                            mus.
+                            Donec
+                            quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+                            quis
+                            enim.<br>
+                            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+                            rhoncus
+                            ut,
+                            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
+                            tincidunt.
+                            Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean
+                            leo
+                            ligula,
+                            porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+                            viverra
+                            quis,
+                            feugiat a,<br>
+                            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+                            rhoncus
+                        </p>
+                    </div>
+                    <div class="illust_photo">
+                        <img src="/Illustrations/illustration_peche.png" alt="Illustration photo">
 
-        </div>
-    </section>
-    <script src="Ibrahima.js"></script>
+                    </div>
+                </div>
+                <div class="passion_jeux">
+                    <div class="text_jeux">
+                        <h1><img src="images/icons8-manette-60.png" alt="icone manette" class="ico_categorie" />Ma
+                            passion pour
+                            les jeux vidéos</h1>
+
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            Aenean
+                            massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            Donec
+                            quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis
+                            enim.
+                            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus
+                            ut,
+                            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
+                            tincidunt.
+                            a,</p>
+
+                    </div>
+                    <div class="illust_photo">
+                        <img src="/Illustrations/illustration_jeux.png" alt="Illustration photo">
+
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section id="contact">
+            <form method="POST" action="traitement.php">
+                <div class="form_identite">
+                    <label for="lastname" class="label_name">Nom*</label>
+                    <input type="text" name="Nom" id="lastname" class="input_name" placeholder="Nom*"required />
+                    <label for="firstname" class="label_name">Prénom*</label>
+                    <input type="text" name="prénom" id="firstname" class="input_name" placeholder="prénom*" required />
+                    <label for="mail" class="label_name">E-mail*</label>
+                    <input type="email" name="E_mail" id="mail" class="input_name" placeholder="E-mail*" required />
+
+                    <div class="checkbox">
+                        <h3>Intéressé par:</h3>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="Photo">
+                            <label class="label_name" for="flexSwitchCheckChecked">La photo</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" id="Pêche">
+                            <label class="label_name" for="flexSwitchCheckChecked">La pêche</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="Jeux">
+                            <label class="label_name" for="flexSwitchCheckChecked">Les jeux vidéos</label>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <h3>Message:</h3>
+                        <textarea name="message" id="message" cols="30" rows="10" class="zone_texte"></textarea>
+                    </div>
+                    <div class="bouton">
+                        <a class="btn btn-primary" href="#" role="button">Envoyer</a>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+    </div>
     <footer>
         <div class="footer">
             <div class="reseaux">
@@ -58,6 +292,8 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="Ibrahima.js" defer></script>
+    <script>AOS.init();</script>
 </body>
 </html>
