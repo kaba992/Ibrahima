@@ -118,7 +118,7 @@ section {
         height: 100vh;
         padding: 30px;
         scroll-snap-align: start;
-        transition: 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
 }
 
 section#home {
