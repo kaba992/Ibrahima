@@ -77,6 +77,10 @@
         box-sizing: border-box;
 }
 
+h1, h2, h3 {
+        font-family: 'Alumni sans', sans-serif;
+}
+
 a {
         text-decoration: none;
         list-style-type: none;
@@ -86,11 +90,6 @@ a {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-}
-
-html {
-        scroll-behavior: smooth;
-        scroll-snap-type: y mandatory;
 }
 
 body {
@@ -107,6 +106,8 @@ body {
         width: 100%;
         height: 100%;
         overflow-y: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
 }
 
 section {
@@ -117,11 +118,11 @@ section {
         width: 100%;
         height: 100vh;
         padding: 30px;
-        scroll-snap-align: center;
+        scroll-snap-align: start;
 }
 
 section#home {
-        background-image: url("/images/splash.jpg");
+        background-image: url("images/splash.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -131,7 +132,15 @@ section#gallerie {}
 
 section#blog {}
 
-section#contact {}
+section#contact {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image: url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-3.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-2.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position: 50% 50%;
+}
 
 .menu a {
         font-family: 'Alumni sans', sans-serif;
@@ -148,7 +157,7 @@ section#contact {}
         position: fixed;
         width: 100%;
         top: 0;
-        z-index: 1;
+        z-index: 999;
         margin: 0px;
         padding: 20px;
         background-color: transparent;
@@ -194,16 +203,16 @@ section#contact {}
 }
 
 .titre_accueil {
+        position: relative;
+        top: -135%;
+        left: -125%;
         display: inline-block;
         flex-wrap: wrap;
         padding: 0;
 }
-.titre_accueil h3{
-        font-family: 'Alumni Sans', sans-serif;
-}
 
 span {
-        transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in;
 }
 
 span.fades {
@@ -221,21 +230,20 @@ span.fades:hover {
 }
 
 .footer {
-        font-family: 'Alumni sans', sans-serif;
         display: flex;
-        position: absolute;
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-        bottom: 0;
+       
         width: 100%;
         padding: 15px;
         transition: transform .2s;
 }
 
 .reseaux p {
+        font-family: 'Alumni sans', sans-serif;
         font-size: 1.3rem;
-        font-weight: 600;
+        font-weight: 550;
         padding-right: 5px;
 }
 
