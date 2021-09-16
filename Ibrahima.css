@@ -93,7 +93,6 @@ a {
 }
 
 body {
-        position: relative;
         background-color: #1e3942;
         margin: 0;
         padding: 0;
@@ -119,6 +118,7 @@ section {
         height: 100vh;
         padding: 30px;
         scroll-snap-align: start;
+        transition: 0.5s ease-in-out;
 }
 
 section#home {
@@ -126,15 +126,22 @@ section#home {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
+        z-index: 1;
 }
 
-section#gallerie {}
+section#gallerie {
+        z-index: 2;
+}
 
-section#blog {}
+section#blog {
+        z-index: 3;
+}
 
 section#contact {
         position: relative;
-        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 100vh;
         background-image: url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-3.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-2.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png);
         background-repeat: no-repeat;
@@ -264,8 +271,8 @@ span.fades:hover {
 /*animation bloc de la page Blog*/
 
 .illust_photo img {
-        width: 350px;
-        height: auto;
+        width: 300px;
+        height: 250px;
 }
 
 .passion_photo {
@@ -299,7 +306,7 @@ span.fades:hover {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        padding-bottom: 50px;
+        padding:55px;
         transition: 0.5s;
 }
 
@@ -367,6 +374,7 @@ form {
         width: 60%;
 }
 
+
 .input_name {
         font-family: eb_garamond_sc12_regular;
         width: 100%;
@@ -383,10 +391,16 @@ form {
         color: transparent;
 }
 
+
 .label_name {
         font-family: eb_garamond_sc12_regular;
         font-size: 1.5em;
         color: gray;
+}
+.check_name{
+        color: white;
+        font-size: 1.2rem;
+        font-weight: lighter;
 }
 
 .input_name:focus {
