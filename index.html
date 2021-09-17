@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Ibrahima.js">
     <link rel="stylesheet" type="text/css" href="Ibrahima.css">
     <title>Ibrahima</title>
 </head>
@@ -47,7 +46,7 @@
         </section>
         <section id="gallerie">
             <div class="gallerie_block">
-                <div class="block1">
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000" class="block1">
                     <div class="photo">
                         <a href="Photos/Mer_belle_ille.jpg"><img src="Photos/photo_mini/Mer_belle_ille.jpg"
                                 alt="Mer_belle_ille"></a>
@@ -78,7 +77,7 @@
                     </div>
 
                 </div>
-                <div class="block2">
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000" class="block2">
                     <div class="photo">
                         <a href="Photos/Bateau_Amorgos.jpg"><img src="Photos/photo_mini/Bateau_Amorgos.jpg"
                                 alt="Mer_Marseille"></a>
@@ -109,7 +108,7 @@
                     </div>
 
                 </div>
-                <div class="block3">
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000" class="block3">
                     <div class="photo">
                         <a href="Photos/Couché_soleil_milos.jpg"><img src="Photos/photo_mini/Couché_soleil_milos.jpg"
                                 alt="Plongeoir_st_malo"></a>
@@ -145,7 +144,7 @@
             <article class="article">
                 <div class="passion_photo">
 
-                    <div class="text_photo">
+                    <div data-aos="fade-right" class="text_photo">
                         <h1>Ma passion pour la photo</h1>
                         <p>orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
                             dolor.
@@ -174,13 +173,13 @@
                             dui. Etiam
                         </p>
                     </div>
-                    <div class="illust_photo">
+                    <div data-aos="fade-left" class="illust_photo">
                         <img src="Illustrations/photo.svg.svg" alt="Illustration photo">
 
                     </div>
                 </div>
                 <div class="passion_peche">
-                    <div class="text_peche">
+                    <div data-aos="fade-right" class="text_peche">
                         <h1>Ma passion pour la peche</h1>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
                             dolor.
@@ -201,19 +200,16 @@
                             ligula,
                             porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
                             viverra
-                            quis,
-                            feugiat a,<br>
-                            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
-                            rhoncus
+
                         </p>
                     </div>
-                    <div class="illust_photo">
+                    <div data-aos="fade-left" class="illust_photo">
                         <img src="Illustrations/peche.svg" alt="Illustration photo">
 
                     </div>
                 </div>
                 <div class="passion_jeux">
-                    <div class="text_jeux">
+                    <div data-aos="fade-right" class="text_jeux">
                         <h1>Ma passion pour les jeux vidéos</h1>
 
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
@@ -229,7 +225,7 @@
                             a,</p>
 
                     </div>
-                    <div class="illust_photo">
+                    <div data-aos="fade-left" class="illust_photo">
                         <img src="Illustrations/Gaming.svg" alt="Illustration photo">
 
                     </div>
@@ -270,27 +266,35 @@
                     </div>
                 </div>
             </form>
-            <footer>
-                <div class="footer">
-                    <div class="reseaux">
-                        <a href="https://www.facebook.com/ibrahimakalil.kaba.73">
-                            <p class="underline">Facebook</p>
-                        </a>
-                        <a href="https://www.instagram.com/ibrahima__kaba/?hl=fr">
-                            <p class="underline">Instagram</p>
-                        </a>
-                        <a href="https://www.linkedin.com/in/ibrahima-kaba-277041178/">
-                            <p class="underline">linkedin</p>
-                        </a>
-                    </div>
-                </div>
-            </footer>
+
         </section>
+        <footer>
+            <div class="footer">
+                <div class="reseaux">
+                    <a href="https://www.facebook.com/ibrahimakalil.kaba.73">
+                        <p class="underline">Facebook</p>
+                    </a>
+                    <a href="https://www.instagram.com/ibrahima__kaba/?hl=fr">
+                        <p class="underline">Instagram</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ibrahima-kaba-277041178/">
+                        <p class="underline">linkedin</p>
+                    </a>
+                </div>
+            </div>
+        </footer>
 
     </div>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="Ibrahima.js" defer></script>
-    <script>AOS.init();</script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 600,
+            easing: 'ease-in-sine',
+            delay: 200,
+        });
+    </script>
 </body>
 
 </html>

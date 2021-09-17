@@ -2,7 +2,6 @@
 
 const text = document.querySelector(".titre");
 const strText = text.textContent;
-console.log(strText);
 const splitText = strText.split("");
 text.textContent = "";
 for (let i = 0; i < splitText.length; i++) {
@@ -51,7 +50,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
         let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
         let x = `${_depth3}, ${_depth2}, ${_depth1}`;
-        console.log(x);
+       // console.log(x);
         elem.style.backgroundPosition = x;
     }
 
