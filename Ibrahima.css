@@ -78,8 +78,7 @@
 }
 
 h1, h2, h3 {
-        font-family: 'Alumni sans', sans-serif;
-        font-weight: 500;
+        font-family: 'Alfa Slab One', cursive;
 }
 
 a {
@@ -98,16 +97,16 @@ body {
         margin: 0;
         padding: 0;
         line-height: 1.25;
-         height: 100%; 
-       /* overflow: hidden; */
+        /* height: 100%;  */
+        /* overflow: hidden; */
 }
 
 .containers {
         width: 100%;
         height: 100%;
-        overflow-y: scroll;
+        /* overflow-y: scroll;
         scroll-behavior: smooth;
-        scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory; */
 }
 
 section {
@@ -122,6 +121,7 @@ section {
 }
 
 section#home {
+        position: relative;
         background-image: url("images/splash.jpg");
         background-size: cover;
         background-repeat: no-repeat;
@@ -131,12 +131,19 @@ section#home {
 }
 
 section#gallerie {
-        z-index: 3;
+        background-image: linear-gradient(27deg, rgba(13,2,0,0.8603816526610644) 0%, rgba(2,2,2,0.7343312324929971) 43%), url('Photos/Bateau_Amorgos.jpg');
+        background-position: top;
+        background-size: cover;
         background-attachment: fixed;
+        z-index: 3;
 }
 
 section#blog {
-        
+        background-image: linear-gradient(27deg, rgba(13,2,0,0.8603816526610644) 0%, rgba(2,2,2,0.7343312324929971) 43%), url('Photos/Couché_soleil_milos.jpg');
+        background-position: top;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: 2;
 }
 
 section#contact {
@@ -145,17 +152,17 @@ section#contact {
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background-image: url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-3.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-2.png), url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-position: 50% 50%;
+        background-image: linear-gradient(27deg, rgba(13,2,0,0.8603816526610644) 0%, rgba(2,2,2,0.7343312324929971) 43%), url('Photos/Gorges_verdon_feuillage.jpg');
+        background-position: top;
+        background-size: cover;
+        background-attachment: fixed;
         z-index: 1;
 }
 
 .menu a {
         font-family: 'Alumni sans', sans-serif;
         text-decoration: none;
-        color: white;
+        color: #EEEEEE;
         padding: 0;
         line-height: 22px;
         font-weight: 500;
@@ -200,7 +207,7 @@ section#contact {
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: white;
+        background-color: #EEEEEE;
         transform-origin: bottom;
         transition: transform 0.25s ease-out;
         transform: scaleX(0);
@@ -226,11 +233,15 @@ span {
 }
 
 span.fades {
-        color: white;
+        color: #EEEEEE;
         font-family: 'Alumni Sans', sans-serif;
-        font-size: 5rem;
         font-weight: 700;
+        font-size: 5rem;
         letter-spacing: 0.5rem;
+}
+
+.titre_accueil h3 {
+        font-family: 'Alumni sans', sans-serif;
 }
 
 span.fades:hover {
@@ -240,6 +251,7 @@ span.fades:hover {
 
 .footer {
         position: fixed;
+        z-index: 999;
         left: 0;
         bottom: 0;
         width: 100%;
@@ -257,13 +269,18 @@ span.fades:hover {
 
 /* CSS Page Blog*/
 
-
-
 /*animation bloc de la page Blog*/
 
 .illust_photo img {
         width: 300px;
         height: 200px;
+        border-radius: 50px;
+        
+        transition: transform 0.5s ease-in-out
+}
+
+.illust_photo:hover img {
+        transform: scale(0.8);
 }
 
 .passion_photo {
@@ -296,59 +313,23 @@ span.fades:hover {
 
 /*CSS Gallerie*/
 
-.gallerie_block {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 55px;
-        transition: 0.5s;
+.carousel img {
+        box-shadow: inset 20px 20px 60px #1a3038, inset -20px -20px 60px #23424c;
 }
 
-.gallerie_block img {
-        padding: 10px;
-        width: 400px;
-        height: auto;
+.carousel-control-prev img {
+        color: #EEEEEE;
+        width: 150px;
+        height: 100px;
+        font-weight: 500;
 }
 
-.block1 {}
-
-.block2 {}
-
-.photo {
-        position: relative;
-        overflow: hidden;
+.carousel-control-next {
+        color: #EEEEEE;
+        font-weight: 500;
 }
 
-.photo img {
-        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-}
-
-.photo p {
-        text-align: center;
-}
-
-.photo .infos_hover {
-        position: absolute;
-        background: rgba(0, 0, 0, 0.8);
-        font-size: 1.5rem;
-        font-weight: 300;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 0;
-        text-align: center;
-        -webkit-transition: all 0.5s;
-        transition: all 0.5s
-}
-
-.photo:hover .infos_hover {
-        height: 15%;
-}
-
-.photo img:hover {
-        filter: grayscale(0);
-        transform: scale(1.1);
-}
+.carousel-caption {}
 
 /* CSS Contact */
 
@@ -387,7 +368,7 @@ form {
 }
 
 .check_name {
-        color: white;
+        color: #EEEEEE;
         font-size: 1.2rem;
         font-weight: lighter;
 }
@@ -428,26 +409,23 @@ form {
         border-color: gray;
 }
 
-@media all and (max-width: 1024px) {
-        .bloc_page {
-                width: auto;
-        }
-        .home img {
-                width: 25px;
-                height: auto;
-        }
-        nav .menu {
-                align-items: center;
-        }
-        #nav a {
-                font-size: 20px;
-        }
+@media screen and (max-width: 1679px) {
         .titre_accueil {
-                height: auto;
-                position: absolute;
-                top: 26%;
-                left: 34%;
-                transform: translate(-50%, -50%);
+                position: relative;
+                top: -135%;
+                left: -109%;
+                display: inline-block;
+                flex-wrap: wrap;
+                padding: 0;
+        }
+}
+
+@media screen and (max-width: 650px) {
+        .titre_accueil {
+                position: relative;
+                top: -135%;
+                left: -9%;
+                display: inline-block;
                 flex-wrap: wrap;
                 padding: 0;
         }
@@ -459,52 +437,22 @@ form {
                 display: block;
                 flex-wrap: wrap;
         }
-        .accueil {
-                display: flex;
-                justify-content: s;
-                padding: 0 10px;
-        }
-        .accueil img {
-                display: none;
-        }
-        .gallerie_block img {
-                display: none;
-                padding: 20px;
-                width: 320px;
-                height: auto;
-        }
-        .baniere_image {
-                display: none;
-        }
-        aside, article {
-                width: auto;
-                margin-bottom: 15px;
-        }
-        aside img {
-                float: right;
-        }
         p {
                 font-size: 0.8em;
                 flex-wrap: wrap;
-        }
-        h2 {
-                font-size: 1.5em;
-        }
-        .ico_categorie {
-                width: 25px;
-                height: auto;
         }
         .logos {
                 display: flex;
                 align-items: center;
                 justify-content: center;
         }
-        .bulle {
+        /*Blog*/
+        .illust_photo img {
                 display: none;
         }
-        .illust_photo img {
-                width: 250px;
-                height: auto;
+        .text_photo, .text_peche, .text_jeux {
+                width: 100%;
+                letter-spacing: 0.02rem;
         }
         .footer {
                 position: fixed;
