@@ -13,7 +13,6 @@ let timer = setInterval(onTick, 100);
 
 function onTick() {
     const span = text.querySelectorAll('span')[char];
-    console.log(span);
     span.classList.add('fades');
     char++
     if (char === splitText.length) {
@@ -35,7 +34,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-// Verre cassé
+// Mouvement souris
 (function () {
     // Add event listener
     document.addEventListener("mousemove", parallax);
@@ -50,7 +49,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
         let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
         let x = `${_depth3}, ${_depth2}, ${_depth1}`;
-       // console.log(x);
+        // console.log(x);
         elem.style.backgroundPosition = x;
     }
 
