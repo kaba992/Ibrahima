@@ -195,6 +195,10 @@ section#contact {
         height: auto;
 }
 
+.carousel-caption h1 {
+        font-size: 1.5rem;
+}
+
 .underline {
         position: relative;
         display: inline-block;
